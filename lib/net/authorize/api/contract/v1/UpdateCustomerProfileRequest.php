@@ -9,7 +9,7 @@ class UpdateCustomerProfileRequest extends ANetApiRequestType
 {
 
     /**
-     * @property \net\authorize\api\contract\v1\CustomerProfileExType $profile
+     * @var \net\authorize\api\contract\v1\CustomerProfileExType $profile
      */
     private $profile = null;
 
@@ -44,7 +44,7 @@ class UpdateCustomerProfileRequest extends ANetApiRequestType
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');

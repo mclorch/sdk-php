@@ -5,34 +5,34 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing ProfileTransAmountType
  *
- * 
+ *
  * XSD Type: profileTransAmountType
  */
 class ProfileTransAmountType implements \JsonSerializable
 {
 
     /**
-     * @property float $amount
+     * @var float $amount
      */
     private $amount = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ExtendedAmountType $tax
+     * @var \net\authorize\api\contract\v1\ExtendedAmountType $tax
      */
     private $tax = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ExtendedAmountType $shipping
+     * @var \net\authorize\api\contract\v1\ExtendedAmountType $shipping
      */
     private $shipping = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ExtendedAmountType $duty
+     * @var \net\authorize\api\contract\v1\ExtendedAmountType $duty
      */
     private $duty = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\LineItemType[] $lineItems
+     * @var \net\authorize\api\contract\v1\LineItemType[] $lineItems
      */
     private $lineItems = null;
 
@@ -189,7 +189,7 @@ class ProfileTransAmountType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -210,15 +210,15 @@ class ProfileTransAmountType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -258,6 +258,6 @@ class ProfileTransAmountType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

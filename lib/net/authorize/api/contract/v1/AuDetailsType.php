@@ -5,44 +5,44 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing AuDetailsType
  *
- * 
+ *
  * XSD Type: auDetailsType
  */
 class AuDetailsType implements \JsonSerializable
 {
 
     /**
-     * @property integer $customerProfileID
+     * @var integer $customerProfileID
      */
     private $customerProfileID = null;
 
     /**
-     * @property integer $customerPaymentProfileID
+     * @var integer $customerPaymentProfileID
      */
     private $customerPaymentProfileID = null;
 
     /**
-     * @property string $firstName
+     * @var string $firstName
      */
     private $firstName = null;
 
     /**
-     * @property string $lastName
+     * @var string $lastName
      */
     private $lastName = null;
 
     /**
-     * @property string $updateTimeUTC
+     * @var string $updateTimeUTC
      */
     private $updateTimeUTC = null;
 
     /**
-     * @property string $auReasonCode
+     * @var string $auReasonCode
      */
     private $auReasonCode = null;
 
     /**
-     * @property string $reasonDescription
+     * @var string $reasonDescription
      */
     private $reasonDescription = null;
 
@@ -209,7 +209,7 @@ class AuDetailsType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -230,15 +230,15 @@ class AuDetailsType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -278,6 +278,6 @@ class AuDetailsType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

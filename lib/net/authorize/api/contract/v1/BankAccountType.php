@@ -5,44 +5,44 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing BankAccountType
  *
- * 
+ *
  * XSD Type: bankAccountType
  */
 class BankAccountType implements \JsonSerializable
 {
 
     /**
-     * @property string $accountType
+     * @var string $accountType
      */
     private $accountType = null;
 
     /**
-     * @property string $routingNumber
+     * @var string $routingNumber
      */
     private $routingNumber = null;
 
     /**
-     * @property string $accountNumber
+     * @var string $accountNumber
      */
     private $accountNumber = null;
 
     /**
-     * @property string $nameOnAccount
+     * @var string $nameOnAccount
      */
     private $nameOnAccount = null;
 
     /**
-     * @property string $echeckType
+     * @var string $echeckType
      */
     private $echeckType = null;
 
     /**
-     * @property string $bankName
+     * @var string $bankName
      */
     private $bankName = null;
 
     /**
-     * @property string $checkNumber
+     * @var string $checkNumber
      */
     private $checkNumber = null;
 
@@ -209,7 +209,7 @@ class BankAccountType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -230,15 +230,15 @@ class BankAccountType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -278,6 +278,6 @@ class BankAccountType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

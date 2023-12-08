@@ -9,17 +9,17 @@ class GetTransactionDetailsResponse extends ANetApiResponseType
 {
 
     /**
-     * @property \net\authorize\api\contract\v1\TransactionDetailsType $transaction
+     * @var \net\authorize\api\contract\v1\TransactionDetailsType $transaction
      */
     private $transaction = null;
 
     /**
-     * @property string $clientId
+     * @var string $clientId
      */
     private $clientId = null;
 
     /**
-     * @property string $transrefId
+     * @var string $transrefId
      */
     private $transrefId = null;
 
@@ -96,8 +96,8 @@ class GetTransactionDetailsResponse extends ANetApiResponseType
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -137,6 +137,6 @@ class GetTransactionDetailsResponse extends ANetApiResponseType
 			}
 		}
     }
-    
+
 }
 

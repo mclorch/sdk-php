@@ -5,29 +5,29 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerProfilePaymentType
  *
- * 
+ *
  * XSD Type: customerProfilePaymentType
  */
 class CustomerProfilePaymentType implements \JsonSerializable
 {
 
     /**
-     * @property boolean $createProfile
+     * @var boolean $createProfile
      */
     private $createProfile = null;
 
     /**
-     * @property string $customerProfileId
+     * @var string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\PaymentProfileType $paymentProfile
+     * @var \net\authorize\api\contract\v1\PaymentProfileType $paymentProfile
      */
     private $paymentProfile = null;
 
     /**
-     * @property string $shippingProfileId
+     * @var string $shippingProfileId
      */
     private $shippingProfileId = null;
 
@@ -128,7 +128,7 @@ class CustomerProfilePaymentType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -149,15 +149,15 @@ class CustomerProfilePaymentType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -197,6 +197,6 @@ class CustomerProfilePaymentType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

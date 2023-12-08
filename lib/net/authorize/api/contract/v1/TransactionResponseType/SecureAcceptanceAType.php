@@ -9,17 +9,17 @@ class SecureAcceptanceAType implements \JsonSerializable
 {
 
     /**
-     * @property string $secureAcceptanceUrl
+     * @var string $secureAcceptanceUrl
      */
     private $secureAcceptanceUrl = null;
 
     /**
-     * @property string $payerID
+     * @var string $payerID
      */
     private $payerID = null;
 
     /**
-     * @property string $payerEmail
+     * @var string $payerEmail
      */
     private $payerEmail = null;
 
@@ -98,7 +98,7 @@ class SecureAcceptanceAType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -119,15 +119,15 @@ class SecureAcceptanceAType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -167,6 +167,6 @@ class SecureAcceptanceAType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

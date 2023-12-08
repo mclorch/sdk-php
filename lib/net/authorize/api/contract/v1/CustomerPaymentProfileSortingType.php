@@ -5,19 +5,19 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerPaymentProfileSortingType
  *
- * 
+ *
  * XSD Type: CustomerPaymentProfileSorting
  */
 class CustomerPaymentProfileSortingType implements \JsonSerializable
 {
 
     /**
-     * @property string $orderBy
+     * @var string $orderBy
      */
     private $orderBy = null;
 
     /**
-     * @property boolean $orderDescending
+     * @var boolean $orderDescending
      */
     private $orderDescending = null;
 
@@ -74,7 +74,7 @@ class CustomerPaymentProfileSortingType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -95,15 +95,15 @@ class CustomerPaymentProfileSortingType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -143,6 +143,6 @@ class CustomerPaymentProfileSortingType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

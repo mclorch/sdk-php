@@ -9,17 +9,17 @@ class GetTransactionListRequest extends ANetApiRequestType
 {
 
     /**
-     * @property string $batchId
+     * @var string $batchId
      */
     private $batchId = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\TransactionListSortingType $sorting
+     * @var \net\authorize\api\contract\v1\TransactionListSortingType $sorting
      */
     private $sorting = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\PagingType $paging
+     * @var \net\authorize\api\contract\v1\PagingType $paging
      */
     private $paging = null;
 
@@ -98,7 +98,7 @@ class GetTransactionListRequest extends ANetApiRequestType
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');

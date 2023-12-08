@@ -5,29 +5,29 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing ProfileTransPriorAuthCaptureType
  *
- * 
+ *
  * XSD Type: profileTransPriorAuthCaptureType
  */
 class ProfileTransPriorAuthCaptureType extends ProfileTransAmountType implements \JsonSerializable
 {
 
     /**
-     * @property string $customerProfileId
+     * @var string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @property string $customerPaymentProfileId
+     * @var string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @property string $customerShippingAddressId
+     * @var string $customerShippingAddressId
      */
     private $customerShippingAddressId = null;
 
     /**
-     * @property string $transId
+     * @var string $transId
      */
     private $transId = null;
 
@@ -128,7 +128,7 @@ class ProfileTransPriorAuthCaptureType extends ProfileTransAmountType implements
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -156,8 +156,8 @@ class ProfileTransPriorAuthCaptureType extends ProfileTransAmountType implements
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -197,6 +197,6 @@ class ProfileTransPriorAuthCaptureType extends ProfileTransAmountType implements
 			}
 		}
     }
-    
+
 }
 

@@ -9,7 +9,7 @@ class UpdateCustomerPaymentProfileResponse extends ANetApiResponseType
 {
 
     /**
-     * @property string $validationDirectResponse
+     * @var string $validationDirectResponse
      */
     private $validationDirectResponse = null;
 
@@ -42,8 +42,8 @@ class UpdateCustomerPaymentProfileResponse extends ANetApiResponseType
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -83,6 +83,6 @@ class UpdateCustomerPaymentProfileResponse extends ANetApiResponseType
 			}
 		}
     }
-    
+
 }
 

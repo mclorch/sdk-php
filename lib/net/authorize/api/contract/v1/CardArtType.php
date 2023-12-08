@@ -5,34 +5,34 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CardArtType
  *
- * 
+ *
  * XSD Type: cardArt
  */
 class CardArtType implements \JsonSerializable
 {
 
     /**
-     * @property string $cardBrand
+     * @var string $cardBrand
      */
     private $cardBrand = null;
 
     /**
-     * @property string $cardImageHeight
+     * @var string $cardImageHeight
      */
     private $cardImageHeight = null;
 
     /**
-     * @property string $cardImageUrl
+     * @var string $cardImageUrl
      */
     private $cardImageUrl = null;
 
     /**
-     * @property string $cardImageWidth
+     * @var string $cardImageWidth
      */
     private $cardImageWidth = null;
 
     /**
-     * @property string $cardType
+     * @var string $cardType
      */
     private $cardType = null;
 
@@ -155,7 +155,7 @@ class CardArtType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -176,15 +176,15 @@ class CardArtType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -224,6 +224,6 @@ class CardArtType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

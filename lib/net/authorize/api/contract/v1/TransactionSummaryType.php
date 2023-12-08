@@ -5,94 +5,94 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing TransactionSummaryType
  *
- * 
+ *
  * XSD Type: transactionSummaryType
  */
 class TransactionSummaryType implements \JsonSerializable
 {
 
     /**
-     * @property string $transId
+     * @var string $transId
      */
     private $transId = null;
 
     /**
-     * @property \DateTime $submitTimeUTC
+     * @var \DateTime $submitTimeUTC
      */
     private $submitTimeUTC = null;
 
     /**
-     * @property \DateTime $submitTimeLocal
+     * @var \DateTime $submitTimeLocal
      */
     private $submitTimeLocal = null;
 
     /**
-     * @property string $transactionStatus
+     * @var string $transactionStatus
      */
     private $transactionStatus = null;
 
     /**
-     * @property string $invoiceNumber
+     * @var string $invoiceNumber
      */
     private $invoiceNumber = null;
 
     /**
-     * @property string $firstName
+     * @var string $firstName
      */
     private $firstName = null;
 
     /**
-     * @property string $lastName
+     * @var string $lastName
      */
     private $lastName = null;
 
     /**
-     * @property string $accountType
+     * @var string $accountType
      */
     private $accountType = null;
 
     /**
-     * @property string $accountNumber
+     * @var string $accountNumber
      */
     private $accountNumber = null;
 
     /**
-     * @property float $settleAmount
+     * @var float $settleAmount
      */
     private $settleAmount = null;
 
     /**
-     * @property string $marketType
+     * @var string $marketType
      */
     private $marketType = null;
 
     /**
-     * @property string $product
+     * @var string $product
      */
     private $product = null;
 
     /**
-     * @property string $mobileDeviceId
+     * @var string $mobileDeviceId
      */
     private $mobileDeviceId = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\SubscriptionPaymentType $subscription
+     * @var \net\authorize\api\contract\v1\SubscriptionPaymentType $subscription
      */
     private $subscription = null;
 
     /**
-     * @property boolean $hasReturnedItems
+     * @var boolean $hasReturnedItems
      */
     private $hasReturnedItems = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\FraudInformationType $fraudInformation
+     * @var \net\authorize\api\contract\v1\FraudInformationType $fraudInformation
      */
     private $fraudInformation = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\CustomerProfileIdType $profile
+     * @var \net\authorize\api\contract\v1\CustomerProfileIdType $profile
      */
     private $profile = null;
 
@@ -479,7 +479,7 @@ class TransactionSummaryType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -500,15 +500,15 @@ class TransactionSummaryType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -548,6 +548,6 @@ class TransactionSummaryType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

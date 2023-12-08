@@ -9,17 +9,17 @@ class GetSettledBatchListRequest extends ANetApiRequestType
 {
 
     /**
-     * @property boolean $includeStatistics
+     * @var boolean $includeStatistics
      */
     private $includeStatistics = null;
 
     /**
-     * @property \DateTime $firstSettlementDate
+     * @var \DateTime $firstSettlementDate
      */
     private $firstSettlementDate = null;
 
     /**
-     * @property \DateTime $lastSettlementDate
+     * @var \DateTime $lastSettlementDate
      */
     private $lastSettlementDate = null;
 
@@ -98,7 +98,7 @@ class GetSettledBatchListRequest extends ANetApiRequestType
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');

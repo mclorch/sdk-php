@@ -5,39 +5,39 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing PayPalType
  *
- * 
+ *
  * XSD Type: payPalType
  */
 class PayPalType implements \JsonSerializable
 {
 
     /**
-     * @property string $successUrl
+     * @var string $successUrl
      */
     private $successUrl = null;
 
     /**
-     * @property string $cancelUrl
+     * @var string $cancelUrl
      */
     private $cancelUrl = null;
 
     /**
-     * @property string $paypalLc
+     * @var string $paypalLc
      */
     private $paypalLc = null;
 
     /**
-     * @property string $paypalHdrImg
+     * @var string $paypalHdrImg
      */
     private $paypalHdrImg = null;
 
     /**
-     * @property string $paypalPayflowcolor
+     * @var string $paypalPayflowcolor
      */
     private $paypalPayflowcolor = null;
 
     /**
-     * @property string $payerID
+     * @var string $payerID
      */
     private $payerID = null;
 
@@ -182,7 +182,7 @@ class PayPalType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -203,15 +203,15 @@ class PayPalType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -251,6 +251,6 @@ class PayPalType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

@@ -9,7 +9,7 @@ class GetAUJobSummaryRequest extends ANetApiRequestType
 {
 
     /**
-     * @property string $month
+     * @var string $month
      */
     private $month = null;
 
@@ -44,7 +44,7 @@ class GetAUJobSummaryRequest extends ANetApiRequestType
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');

@@ -9,7 +9,7 @@ class CreateTransactionRequest extends ANetApiRequestType
 {
 
     /**
-     * @property \net\authorize\api\contract\v1\TransactionRequestType
+     * @var \net\authorize\api\contract\v1\TransactionRequestType
      * $transactionRequest
      */
     private $transactionRequest = null;
@@ -45,7 +45,7 @@ class CreateTransactionRequest extends ANetApiRequestType
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');

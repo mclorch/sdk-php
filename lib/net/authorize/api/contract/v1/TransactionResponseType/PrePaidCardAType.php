@@ -9,17 +9,17 @@ class PrePaidCardAType implements \JsonSerializable
 {
 
     /**
-     * @property string $requestedAmount
+     * @var string $requestedAmount
      */
     private $requestedAmount = null;
 
     /**
-     * @property string $approvedAmount
+     * @var string $approvedAmount
      */
     private $approvedAmount = null;
 
     /**
-     * @property string $balanceOnCard
+     * @var string $balanceOnCard
      */
     private $balanceOnCard = null;
 
@@ -98,7 +98,7 @@ class PrePaidCardAType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -119,15 +119,15 @@ class PrePaidCardAType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -167,6 +167,6 @@ class PrePaidCardAType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

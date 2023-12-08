@@ -5,44 +5,44 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerType
  *
- * 
+ *
  * XSD Type: customerType
  */
 class CustomerType implements \JsonSerializable
 {
 
     /**
-     * @property string $type
+     * @var string $type
      */
     private $type = null;
 
     /**
-     * @property string $id
+     * @var string $id
      */
     private $id = null;
 
     /**
-     * @property string $email
+     * @var string $email
      */
     private $email = null;
 
     /**
-     * @property string $phoneNumber
+     * @var string $phoneNumber
      */
     private $phoneNumber = null;
 
     /**
-     * @property string $faxNumber
+     * @var string $faxNumber
      */
     private $faxNumber = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\DriversLicenseType $driversLicense
+     * @var \net\authorize\api\contract\v1\DriversLicenseType $driversLicense
      */
     private $driversLicense = null;
 
     /**
-     * @property string $taxId
+     * @var string $taxId
      */
     private $taxId = null;
 
@@ -209,7 +209,7 @@ class CustomerType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -230,15 +230,15 @@ class CustomerType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -278,6 +278,6 @@ class CustomerType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

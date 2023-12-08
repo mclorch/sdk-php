@@ -5,24 +5,24 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerAddressType
  *
- * 
+ *
  * XSD Type: customerAddressType
  */
 class CustomerAddressType extends NameAndAddressType implements \JsonSerializable
 {
 
     /**
-     * @property string $phoneNumber
+     * @var string $phoneNumber
      */
     private $phoneNumber = null;
 
     /**
-     * @property string $faxNumber
+     * @var string $faxNumber
      */
     private $faxNumber = null;
 
     /**
-     * @property string $email
+     * @var string $email
      */
     private $email = null;
 
@@ -101,7 +101,7 @@ class CustomerAddressType extends NameAndAddressType implements \JsonSerializabl
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -129,8 +129,8 @@ class CustomerAddressType extends NameAndAddressType implements \JsonSerializabl
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -170,6 +170,6 @@ class CustomerAddressType extends NameAndAddressType implements \JsonSerializabl
 			}
 		}
     }
-    
+
 }
 

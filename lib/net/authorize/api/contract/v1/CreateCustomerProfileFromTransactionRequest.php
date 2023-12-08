@@ -9,32 +9,32 @@ class CreateCustomerProfileFromTransactionRequest extends ANetApiRequestType
 {
 
     /**
-     * @property string $transId
+     * @var string $transId
      */
     private $transId = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\CustomerProfileBaseType $customer
+     * @var \net\authorize\api\contract\v1\CustomerProfileBaseType $customer
      */
     private $customer = null;
 
     /**
-     * @property string $customerProfileId
+     * @var string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @property boolean $defaultPaymentProfile
+     * @var boolean $defaultPaymentProfile
      */
     private $defaultPaymentProfile = null;
 
     /**
-     * @property boolean $defaultShippingAddress
+     * @var boolean $defaultShippingAddress
      */
     private $defaultShippingAddress = null;
 
     /**
-     * @property string $profileType
+     * @var string $profileType
      */
     private $profileType = null;
 
@@ -179,7 +179,7 @@ class CreateCustomerProfileFromTransactionRequest extends ANetApiRequestType
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');

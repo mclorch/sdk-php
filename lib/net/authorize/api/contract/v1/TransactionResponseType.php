@@ -5,146 +5,146 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing TransactionResponseType
  *
- * 
+ *
  * XSD Type: transactionResponse
  */
 class TransactionResponseType implements \JsonSerializable
 {
 
     /**
-     * @property string $responseCode
+     * @var string $responseCode
      */
     private $responseCode = null;
 
     /**
-     * @property string $rawResponseCode
+     * @var string $rawResponseCode
      */
     private $rawResponseCode = null;
 
     /**
-     * @property string $authCode
+     * @var string $authCode
      */
     private $authCode = null;
 
     /**
-     * @property string $avsResultCode
+     * @var string $avsResultCode
      */
     private $avsResultCode = null;
 
     /**
-     * @property string $cvvResultCode
+     * @var string $cvvResultCode
      */
     private $cvvResultCode = null;
 
     /**
-     * @property string $cavvResultCode
+     * @var string $cavvResultCode
      */
     private $cavvResultCode = null;
 
     /**
-     * @property string $transId
+     * @var string $transId
      */
     private $transId = null;
 
     /**
-     * @property string $refTransID
+     * @var string $refTransID
      */
     private $refTransID = null;
 
     /**
-     * @property string $transHash
+     * @var string $transHash
      */
     private $transHash = null;
 
     /**
-     * @property string $testRequest
+     * @var string $testRequest
      */
     private $testRequest = null;
 
     /**
-     * @property string $accountNumber
+     * @var string $accountNumber
      */
     private $accountNumber = null;
 
     /**
-     * @property string $entryMode
+     * @var string $entryMode
      */
     private $entryMode = null;
 
     /**
-     * @property string $accountType
+     * @var string $accountType
      */
     private $accountType = null;
 
     /**
-     * @property string $splitTenderId
+     * @var string $splitTenderId
      */
     private $splitTenderId = null;
 
     /**
-     * @property
+     * @var
      * \net\authorize\api\contract\v1\TransactionResponseType\PrePaidCardAType
      * $prePaidCard
      */
     private $prePaidCard = null;
 
     /**
-     * @property
+     * @var
      * \net\authorize\api\contract\v1\TransactionResponseType\MessagesAType\MessageAType[]
      * $messages
      */
     private $messages = null;
 
     /**
-     * @property
+     * @var
      * \net\authorize\api\contract\v1\TransactionResponseType\ErrorsAType\ErrorAType[]
      * $errors
      */
     private $errors = null;
 
     /**
-     * @property
+     * @var
      * \net\authorize\api\contract\v1\TransactionResponseType\SplitTenderPaymentsAType\SplitTenderPaymentAType[]
      * $splitTenderPayments
      */
     private $splitTenderPayments = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\UserFieldType[] $userFields
+     * @var \net\authorize\api\contract\v1\UserFieldType[] $userFields
      */
     private $userFields = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\NameAndAddressType $shipTo
+     * @var \net\authorize\api\contract\v1\NameAndAddressType $shipTo
      */
     private $shipTo = null;
 
     /**
-     * @property
+     * @var
      * \net\authorize\api\contract\v1\TransactionResponseType\SecureAcceptanceAType
      * $secureAcceptance
      */
     private $secureAcceptance = null;
 
     /**
-     * @property
+     * @var
      * \net\authorize\api\contract\v1\TransactionResponseType\EmvResponseAType
      * $emvResponse
      */
     private $emvResponse = null;
 
     /**
-     * @property string $transHashSha2
+     * @var string $transHashSha2
      */
     private $transHashSha2 = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\CustomerProfileIdType $profile
+     * @var \net\authorize\api\contract\v1\CustomerProfileIdType $profile
      */
     private $profile = null;
 
     /**
-     * @property string $networkTransId
+     * @var string $networkTransId
      */
     private $networkTransId = null;
 
@@ -863,7 +863,7 @@ class TransactionResponseType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -884,15 +884,15 @@ class TransactionResponseType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -932,6 +932,6 @@ class TransactionResponseType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

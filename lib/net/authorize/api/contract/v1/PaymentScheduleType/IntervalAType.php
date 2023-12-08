@@ -9,12 +9,12 @@ class IntervalAType implements \JsonSerializable
 {
 
     /**
-     * @property integer $length
+     * @var integer $length
      */
     private $length = null;
 
     /**
-     * @property string $unit
+     * @var string $unit
      */
     private $unit = null;
 
@@ -71,7 +71,7 @@ class IntervalAType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -92,15 +92,15 @@ class IntervalAType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -140,6 +140,6 @@ class IntervalAType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

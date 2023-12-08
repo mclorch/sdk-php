@@ -5,114 +5,114 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing BatchStatisticType
  *
- * 
+ *
  * XSD Type: batchStatisticType
  */
 class BatchStatisticType implements \JsonSerializable
 {
 
     /**
-     * @property string $accountType
+     * @var string $accountType
      */
     private $accountType = null;
 
     /**
-     * @property float $chargeAmount
+     * @var float $chargeAmount
      */
     private $chargeAmount = null;
 
     /**
-     * @property integer $chargeCount
+     * @var integer $chargeCount
      */
     private $chargeCount = null;
 
     /**
-     * @property float $refundAmount
+     * @var float $refundAmount
      */
     private $refundAmount = null;
 
     /**
-     * @property integer $refundCount
+     * @var integer $refundCount
      */
     private $refundCount = null;
 
     /**
-     * @property integer $voidCount
+     * @var integer $voidCount
      */
     private $voidCount = null;
 
     /**
-     * @property integer $declineCount
+     * @var integer $declineCount
      */
     private $declineCount = null;
 
     /**
-     * @property integer $errorCount
+     * @var integer $errorCount
      */
     private $errorCount = null;
 
     /**
-     * @property float $returnedItemAmount
+     * @var float $returnedItemAmount
      */
     private $returnedItemAmount = null;
 
     /**
-     * @property integer $returnedItemCount
+     * @var integer $returnedItemCount
      */
     private $returnedItemCount = null;
 
     /**
-     * @property float $chargebackAmount
+     * @var float $chargebackAmount
      */
     private $chargebackAmount = null;
 
     /**
-     * @property integer $chargebackCount
+     * @var integer $chargebackCount
      */
     private $chargebackCount = null;
 
     /**
-     * @property integer $correctionNoticeCount
+     * @var integer $correctionNoticeCount
      */
     private $correctionNoticeCount = null;
 
     /**
-     * @property float $chargeChargeBackAmount
+     * @var float $chargeChargeBackAmount
      */
     private $chargeChargeBackAmount = null;
 
     /**
-     * @property integer $chargeChargeBackCount
+     * @var integer $chargeChargeBackCount
      */
     private $chargeChargeBackCount = null;
 
     /**
-     * @property float $refundChargeBackAmount
+     * @var float $refundChargeBackAmount
      */
     private $refundChargeBackAmount = null;
 
     /**
-     * @property integer $refundChargeBackCount
+     * @var integer $refundChargeBackCount
      */
     private $refundChargeBackCount = null;
 
     /**
-     * @property float $chargeReturnedItemsAmount
+     * @var float $chargeReturnedItemsAmount
      */
     private $chargeReturnedItemsAmount = null;
 
     /**
-     * @property integer $chargeReturnedItemsCount
+     * @var integer $chargeReturnedItemsCount
      */
     private $chargeReturnedItemsCount = null;
 
     /**
-     * @property float $refundReturnedItemsAmount
+     * @var float $refundReturnedItemsAmount
      */
     private $refundReturnedItemsAmount = null;
 
     /**
-     * @property integer $refundReturnedItemsCount
+     * @var integer $refundReturnedItemsCount
      */
     private $refundReturnedItemsCount = null;
 
@@ -587,7 +587,7 @@ class BatchStatisticType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -608,15 +608,15 @@ class BatchStatisticType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -656,6 +656,6 @@ class BatchStatisticType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

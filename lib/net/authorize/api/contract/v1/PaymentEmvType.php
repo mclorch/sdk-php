@@ -5,24 +5,24 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing PaymentEmvType
  *
- * 
+ *
  * XSD Type: paymentEmvType
  */
 class PaymentEmvType implements \JsonSerializable
 {
 
     /**
-     * @property mixed $emvData
+     * @var mixed $emvData
      */
     private $emvData = null;
 
     /**
-     * @property mixed $emvDescriptor
+     * @var mixed $emvDescriptor
      */
     private $emvDescriptor = null;
 
     /**
-     * @property mixed $emvVersion
+     * @var mixed $emvVersion
      */
     private $emvVersion = null;
 
@@ -101,7 +101,7 @@ class PaymentEmvType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -122,15 +122,15 @@ class PaymentEmvType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -170,6 +170,6 @@ class PaymentEmvType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

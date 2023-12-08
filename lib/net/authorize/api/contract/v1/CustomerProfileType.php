@@ -5,25 +5,25 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerProfileType
  *
- * 
+ *
  * XSD Type: customerProfileType
  */
 class CustomerProfileType extends CustomerProfileBaseType implements \JsonSerializable
 {
 
     /**
-     * @property \net\authorize\api\contract\v1\CustomerPaymentProfileType[]
+     * @var \net\authorize\api\contract\v1\CustomerPaymentProfileType[]
      * $paymentProfiles
      */
     private $paymentProfiles = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\CustomerAddressType[] $shipToList
+     * @var \net\authorize\api\contract\v1\CustomerAddressType[] $shipToList
      */
     private $shipToList = null;
 
     /**
-     * @property string $profileType
+     * @var string $profileType
      */
     private $profileType = null;
 
@@ -172,7 +172,7 @@ class CustomerProfileType extends CustomerProfileBaseType implements \JsonSerial
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -200,8 +200,8 @@ class CustomerProfileType extends CustomerProfileBaseType implements \JsonSerial
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -241,6 +241,6 @@ class CustomerProfileType extends CustomerProfileBaseType implements \JsonSerial
 			}
 		}
     }
-    
+
 }
 

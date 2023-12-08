@@ -5,50 +5,50 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing ARBSubscriptionMaskedType
  *
- * 
+ *
  * XSD Type: ARBSubscriptionMaskedType
  */
 class ARBSubscriptionMaskedType implements \JsonSerializable
 {
 
     /**
-     * @property string $name
+     * @var string $name
      */
     private $name = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\PaymentScheduleType $paymentSchedule
+     * @var \net\authorize\api\contract\v1\PaymentScheduleType $paymentSchedule
      */
     private $paymentSchedule = null;
 
     /**
-     * @property float $amount
+     * @var float $amount
      */
     private $amount = null;
 
     /**
-     * @property float $trialAmount
+     * @var float $trialAmount
      */
     private $trialAmount = null;
 
     /**
-     * @property string $status
+     * @var string $status
      */
     private $status = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\SubscriptionCustomerProfileType
+     * @var \net\authorize\api\contract\v1\SubscriptionCustomerProfileType
      * $profile
      */
     private $profile = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\OrderType $order
+     * @var \net\authorize\api\contract\v1\OrderType $order
      */
     private $order = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ArbTransactionType[] $arbTransactions
+     * @var \net\authorize\api\contract\v1\ArbTransactionType[] $arbTransactions
      */
     private $arbTransactions = null;
 
@@ -271,7 +271,7 @@ class ARBSubscriptionMaskedType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -292,15 +292,15 @@ class ARBSubscriptionMaskedType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -340,6 +340,6 @@ class ARBSubscriptionMaskedType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

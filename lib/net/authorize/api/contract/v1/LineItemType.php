@@ -5,139 +5,139 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing LineItemType
  *
- * 
+ *
  * XSD Type: lineItemType
  */
 class LineItemType implements \JsonSerializable
 {
 
     /**
-     * @property string $itemId
+     * @var string $itemId
      */
     private $itemId = null;
 
     /**
-     * @property string $name
+     * @var string $name
      */
     private $name = null;
 
     /**
-     * @property string $description
+     * @var string $description
      */
     private $description = null;
 
     /**
-     * @property float $quantity
+     * @var float $quantity
      */
     private $quantity = null;
 
     /**
-     * @property float $unitPrice
+     * @var float $unitPrice
      */
     private $unitPrice = null;
 
     /**
-     * @property boolean $taxable
+     * @var boolean $taxable
      */
     private $taxable = null;
 
     /**
-     * @property string $unitOfMeasure
+     * @var string $unitOfMeasure
      */
     private $unitOfMeasure = null;
 
     /**
-     * @property string $typeOfSupply
+     * @var string $typeOfSupply
      */
     private $typeOfSupply = null;
 
     /**
-     * @property float $taxRate
+     * @var float $taxRate
      */
     private $taxRate = null;
 
     /**
-     * @property float $taxAmount
+     * @var float $taxAmount
      */
     private $taxAmount = null;
 
     /**
-     * @property float $nationalTax
+     * @var float $nationalTax
      */
     private $nationalTax = null;
 
     /**
-     * @property float $localTax
+     * @var float $localTax
      */
     private $localTax = null;
 
     /**
-     * @property float $vatRate
+     * @var float $vatRate
      */
     private $vatRate = null;
 
     /**
-     * @property string $alternateTaxId
+     * @var string $alternateTaxId
      */
     private $alternateTaxId = null;
 
     /**
-     * @property string $alternateTaxType
+     * @var string $alternateTaxType
      */
     private $alternateTaxType = null;
 
     /**
-     * @property string $alternateTaxTypeApplied
+     * @var string $alternateTaxTypeApplied
      */
     private $alternateTaxTypeApplied = null;
 
     /**
-     * @property float $alternateTaxRate
+     * @var float $alternateTaxRate
      */
     private $alternateTaxRate = null;
 
     /**
-     * @property float $alternateTaxAmount
+     * @var float $alternateTaxAmount
      */
     private $alternateTaxAmount = null;
 
     /**
-     * @property float $totalAmount
+     * @var float $totalAmount
      */
     private $totalAmount = null;
 
     /**
-     * @property string $commodityCode
+     * @var string $commodityCode
      */
     private $commodityCode = null;
 
     /**
-     * @property string $productCode
+     * @var string $productCode
      */
     private $productCode = null;
 
     /**
-     * @property string $productSKU
+     * @var string $productSKU
      */
     private $productSKU = null;
 
     /**
-     * @property float $discountRate
+     * @var float $discountRate
      */
     private $discountRate = null;
 
     /**
-     * @property float $discountAmount
+     * @var float $discountAmount
      */
     private $discountAmount = null;
 
     /**
-     * @property boolean $taxIncludedInTotal
+     * @var boolean $taxIncludedInTotal
      */
     private $taxIncludedInTotal = null;
 
     /**
-     * @property boolean $taxIsAfterDiscount
+     * @var boolean $taxIsAfterDiscount
      */
     private $taxIsAfterDiscount = null;
 
@@ -722,7 +722,7 @@ class LineItemType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -743,15 +743,15 @@ class LineItemType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -791,6 +791,6 @@ class LineItemType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

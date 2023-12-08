@@ -9,7 +9,7 @@ class GetHostedProfilePageRequest extends ANetApiRequestType
 {
 
     /**
-     * @property string $customerProfileId
+     * @var string $customerProfileId
      */
     private $customerProfileId = null;
 
@@ -21,7 +21,7 @@ class GetHostedProfilePageRequest extends ANetApiRequestType
      * hostedProfileBillingAddressOptions, hostedProfileManageOptions,
      * hostedProfilePaymentOptions, hostedProfileSaveButtonText.
      *
-     * @property \net\authorize\api\contract\v1\SettingType[] $hostedProfileSettings
+     * @var \net\authorize\api\contract\v1\SettingType[] $hostedProfileSettings
      */
     private $hostedProfileSettings = null;
 
@@ -147,7 +147,7 @@ class GetHostedProfilePageRequest extends ANetApiRequestType
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');

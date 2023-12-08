@@ -5,19 +5,19 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing FDSFilterType
  *
- * 
+ *
  * XSD Type: FDSFilterType
  */
 class FDSFilterType implements \JsonSerializable
 {
 
     /**
-     * @property string $name
+     * @var string $name
      */
     private $name = null;
 
     /**
-     * @property string $action
+     * @var string $action
      */
     private $action = null;
 
@@ -74,7 +74,7 @@ class FDSFilterType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -95,15 +95,15 @@ class FDSFilterType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -143,6 +143,6 @@ class FDSFilterType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

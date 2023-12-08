@@ -9,27 +9,27 @@ class ValidateCustomerPaymentProfileRequest extends ANetApiRequestType
 {
 
     /**
-     * @property string $customerProfileId
+     * @var string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @property string $customerPaymentProfileId
+     * @var string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @property string $customerShippingAddressId
+     * @var string $customerShippingAddressId
      */
     private $customerShippingAddressId = null;
 
     /**
-     * @property string $cardCode
+     * @var string $cardCode
      */
     private $cardCode = null;
 
     /**
-     * @property string $validationMode
+     * @var string $validationMode
      */
     private $validationMode = null;
 
@@ -152,7 +152,7 @@ class ValidateCustomerPaymentProfileRequest extends ANetApiRequestType
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');

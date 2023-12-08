@@ -5,29 +5,29 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing TokenMaskedType
  *
- * 
+ *
  * XSD Type: tokenMaskedType
  */
 class TokenMaskedType implements \JsonSerializable
 {
 
     /**
-     * @property string $tokenSource
+     * @var string $tokenSource
      */
     private $tokenSource = null;
 
     /**
-     * @property string $tokenNumber
+     * @var string $tokenNumber
      */
     private $tokenNumber = null;
 
     /**
-     * @property string $expirationDate
+     * @var string $expirationDate
      */
     private $expirationDate = null;
 
     /**
-     * @property string $tokenRequestorId
+     * @var string $tokenRequestorId
      */
     private $tokenRequestorId = null;
 
@@ -128,7 +128,7 @@ class TokenMaskedType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -149,15 +149,15 @@ class TokenMaskedType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -197,6 +197,6 @@ class TokenMaskedType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

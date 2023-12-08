@@ -5,34 +5,34 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerPaymentProfileType
  *
- * 
+ *
  * XSD Type: customerPaymentProfileType
  */
 class CustomerPaymentProfileType extends CustomerPaymentProfileBaseType implements \JsonSerializable
 {
 
     /**
-     * @property \net\authorize\api\contract\v1\PaymentType $payment
+     * @var \net\authorize\api\contract\v1\PaymentType $payment
      */
     private $payment = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\DriversLicenseType $driversLicense
+     * @var \net\authorize\api\contract\v1\DriversLicenseType $driversLicense
      */
     private $driversLicense = null;
 
     /**
-     * @property string $taxId
+     * @var string $taxId
      */
     private $taxId = null;
 
     /**
-     * @property boolean $defaultPaymentProfile
+     * @var boolean $defaultPaymentProfile
      */
     private $defaultPaymentProfile = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\SubsequentAuthInformationType
+     * @var \net\authorize\api\contract\v1\SubsequentAuthInformationType
      * $subsequentAuthInformation
      */
     private $subsequentAuthInformation = null;
@@ -157,7 +157,7 @@ class CustomerPaymentProfileType extends CustomerPaymentProfileBaseType implemen
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -185,8 +185,8 @@ class CustomerPaymentProfileType extends CustomerPaymentProfileBaseType implemen
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -226,6 +226,6 @@ class CustomerPaymentProfileType extends CustomerPaymentProfileBaseType implemen
 			}
 		}
     }
-    
+
 }
 

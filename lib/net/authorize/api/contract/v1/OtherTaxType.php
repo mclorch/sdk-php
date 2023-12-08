@@ -5,39 +5,39 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing OtherTaxType
  *
- * 
+ *
  * XSD Type: otherTaxType
  */
 class OtherTaxType implements \JsonSerializable
 {
 
     /**
-     * @property float $nationalTaxAmount
+     * @var float $nationalTaxAmount
      */
     private $nationalTaxAmount = null;
 
     /**
-     * @property float $localTaxAmount
+     * @var float $localTaxAmount
      */
     private $localTaxAmount = null;
 
     /**
-     * @property float $alternateTaxAmount
+     * @var float $alternateTaxAmount
      */
     private $alternateTaxAmount = null;
 
     /**
-     * @property string $alternateTaxId
+     * @var string $alternateTaxId
      */
     private $alternateTaxId = null;
 
     /**
-     * @property float $vatTaxRate
+     * @var float $vatTaxRate
      */
     private $vatTaxRate = null;
 
     /**
-     * @property float $vatTaxAmount
+     * @var float $vatTaxAmount
      */
     private $vatTaxAmount = null;
 
@@ -182,7 +182,7 @@ class OtherTaxType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -203,15 +203,15 @@ class OtherTaxType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -251,6 +251,6 @@ class OtherTaxType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

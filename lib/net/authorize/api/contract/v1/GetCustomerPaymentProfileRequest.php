@@ -9,22 +9,22 @@ class GetCustomerPaymentProfileRequest extends ANetApiRequestType
 {
 
     /**
-     * @property string $customerProfileId
+     * @var string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @property string $customerPaymentProfileId
+     * @var string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @property boolean $unmaskExpirationDate
+     * @var boolean $unmaskExpirationDate
      */
     private $unmaskExpirationDate = null;
 
     /**
-     * @property boolean $includeIssuerInfo
+     * @var boolean $includeIssuerInfo
      */
     private $includeIssuerInfo = null;
 
@@ -125,7 +125,7 @@ class GetCustomerPaymentProfileRequest extends ANetApiRequestType
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');

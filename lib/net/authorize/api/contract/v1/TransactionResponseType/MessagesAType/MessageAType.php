@@ -9,12 +9,12 @@ class MessageAType implements \JsonSerializable
 {
 
     /**
-     * @property string $code
+     * @var string $code
      */
     private $code = null;
 
     /**
-     * @property string $description
+     * @var string $description
      */
     private $description = null;
 
@@ -71,7 +71,7 @@ class MessageAType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -92,15 +92,15 @@ class MessageAType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -140,6 +140,6 @@ class MessageAType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

@@ -5,24 +5,24 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing AuResponseType
  *
- * 
+ *
  * XSD Type: auResponseType
  */
 class AuResponseType implements \JsonSerializable
 {
 
     /**
-     * @property string $auReasonCode
+     * @var string $auReasonCode
      */
     private $auReasonCode = null;
 
     /**
-     * @property integer $profileCount
+     * @var integer $profileCount
      */
     private $profileCount = null;
 
     /**
-     * @property string $reasonDescription
+     * @var string $reasonDescription
      */
     private $reasonDescription = null;
 
@@ -101,7 +101,7 @@ class AuResponseType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -122,15 +122,15 @@ class AuResponseType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -170,6 +170,6 @@ class AuResponseType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

@@ -5,64 +5,64 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing SubMerchantType
  *
- * 
+ *
  * XSD Type: subMerchantType
  */
 class SubMerchantType implements \JsonSerializable
 {
 
     /**
-     * @property string $identifier
+     * @var string $identifier
      */
     private $identifier = null;
 
     /**
-     * @property string $doingBusinessAs
+     * @var string $doingBusinessAs
      */
     private $doingBusinessAs = null;
 
     /**
-     * @property string $paymentServiceProviderName
+     * @var string $paymentServiceProviderName
      */
     private $paymentServiceProviderName = null;
 
     /**
-     * @property string $paymentServiceFacilitator
+     * @var string $paymentServiceFacilitator
      */
     private $paymentServiceFacilitator = null;
 
     /**
-     * @property string $streetAddress
+     * @var string $streetAddress
      */
     private $streetAddress = null;
 
     /**
-     * @property string $phone
+     * @var string $phone
      */
     private $phone = null;
 
     /**
-     * @property string $email
+     * @var string $email
      */
     private $email = null;
 
     /**
-     * @property string $postalCode
+     * @var string $postalCode
      */
     private $postalCode = null;
 
     /**
-     * @property string $city
+     * @var string $city
      */
     private $city = null;
 
     /**
-     * @property string $regionCode
+     * @var string $regionCode
      */
     private $regionCode = null;
 
     /**
-     * @property string $countryCode
+     * @var string $countryCode
      */
     private $countryCode = null;
 
@@ -317,7 +317,7 @@ class SubMerchantType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -338,15 +338,15 @@ class SubMerchantType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -386,6 +386,6 @@ class SubMerchantType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

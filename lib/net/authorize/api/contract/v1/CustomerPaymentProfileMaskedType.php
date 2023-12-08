@@ -5,55 +5,55 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerPaymentProfileMaskedType
  *
- * 
+ *
  * XSD Type: customerPaymentProfileMaskedType
  */
 class CustomerPaymentProfileMaskedType extends CustomerPaymentProfileBaseType implements \JsonSerializable
 {
 
     /**
-     * @property string $customerProfileId
+     * @var string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @property string $customerPaymentProfileId
+     * @var string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @property boolean $defaultPaymentProfile
+     * @var boolean $defaultPaymentProfile
      */
     private $defaultPaymentProfile = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\PaymentMaskedType $payment
+     * @var \net\authorize\api\contract\v1\PaymentMaskedType $payment
      */
     private $payment = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\DriversLicenseMaskedType
+     * @var \net\authorize\api\contract\v1\DriversLicenseMaskedType
      * $driversLicense
      */
     private $driversLicense = null;
 
     /**
-     * @property string $taxId
+     * @var string $taxId
      */
     private $taxId = null;
 
     /**
-     * @property string[] $subscriptionIds
+     * @var string[] $subscriptionIds
      */
     private $subscriptionIds = null;
 
     /**
-     * @property string $originalNetworkTransId
+     * @var string $originalNetworkTransId
      */
     private $originalNetworkTransId = null;
 
     /**
-     * @property float $originalAuthAmount
+     * @var float $originalAuthAmount
      */
     private $originalAuthAmount = null;
 
@@ -298,7 +298,7 @@ class CustomerPaymentProfileMaskedType extends CustomerPaymentProfileBaseType im
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -326,8 +326,8 @@ class CustomerPaymentProfileMaskedType extends CustomerPaymentProfileBaseType im
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -367,6 +367,6 @@ class CustomerPaymentProfileMaskedType extends CustomerPaymentProfileBaseType im
 			}
 		}
     }
-    
+
 }
 

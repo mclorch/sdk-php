@@ -5,24 +5,24 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing PaymentMaskedType
  *
- * 
+ *
  * XSD Type: paymentMaskedType
  */
 class PaymentMaskedType implements \JsonSerializable
 {
 
     /**
-     * @property \net\authorize\api\contract\v1\CreditCardMaskedType $creditCard
+     * @var \net\authorize\api\contract\v1\CreditCardMaskedType $creditCard
      */
     private $creditCard = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\BankAccountMaskedType $bankAccount
+     * @var \net\authorize\api\contract\v1\BankAccountMaskedType $bankAccount
      */
     private $bankAccount = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\TokenMaskedType $tokenInformation
+     * @var \net\authorize\api\contract\v1\TokenMaskedType $tokenInformation
      */
     private $tokenInformation = null;
 
@@ -101,7 +101,7 @@ class PaymentMaskedType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -122,15 +122,15 @@ class PaymentMaskedType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -170,6 +170,6 @@ class PaymentMaskedType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

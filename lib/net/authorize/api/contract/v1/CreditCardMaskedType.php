@@ -5,39 +5,39 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CreditCardMaskedType
  *
- * 
+ *
  * XSD Type: creditCardMaskedType
  */
 class CreditCardMaskedType implements \JsonSerializable
 {
 
     /**
-     * @property string $cardNumber
+     * @var string $cardNumber
      */
     private $cardNumber = null;
 
     /**
-     * @property string $expirationDate
+     * @var string $expirationDate
      */
     private $expirationDate = null;
 
     /**
-     * @property string $cardType
+     * @var string $cardType
      */
     private $cardType = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\CardArtType $cardArt
+     * @var \net\authorize\api\contract\v1\CardArtType $cardArt
      */
     private $cardArt = null;
 
     /**
-     * @property string $issuerNumber
+     * @var string $issuerNumber
      */
     private $issuerNumber = null;
 
     /**
-     * @property boolean $isPaymentToken
+     * @var boolean $isPaymentToken
      */
     private $isPaymentToken = null;
 
@@ -182,7 +182,7 @@ class CreditCardMaskedType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -203,15 +203,15 @@ class CreditCardMaskedType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -251,6 +251,6 @@ class CreditCardMaskedType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

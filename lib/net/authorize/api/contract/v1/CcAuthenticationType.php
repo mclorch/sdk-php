@@ -5,19 +5,19 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CcAuthenticationType
  *
- * 
+ *
  * XSD Type: ccAuthenticationType
  */
 class CcAuthenticationType implements \JsonSerializable
 {
 
     /**
-     * @property string $authenticationIndicator
+     * @var string $authenticationIndicator
      */
     private $authenticationIndicator = null;
 
     /**
-     * @property string $cardholderAuthenticationValue
+     * @var string $cardholderAuthenticationValue
      */
     private $cardholderAuthenticationValue = null;
 
@@ -74,7 +74,7 @@ class CcAuthenticationType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -95,15 +95,15 @@ class CcAuthenticationType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -143,6 +143,6 @@ class CcAuthenticationType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

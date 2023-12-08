@@ -5,89 +5,89 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing SubscriptionDetailType
  *
- * 
+ *
  * XSD Type: SubscriptionDetail
  */
 class SubscriptionDetailType implements \JsonSerializable
 {
 
     /**
-     * @property integer $id
+     * @var integer $id
      */
     private $id = null;
 
     /**
-     * @property string $name
+     * @var string $name
      */
     private $name = null;
 
     /**
-     * @property string $status
+     * @var string $status
      */
     private $status = null;
 
     /**
-     * @property \DateTime $createTimeStampUTC
+     * @var \DateTime $createTimeStampUTC
      */
     private $createTimeStampUTC = null;
 
     /**
-     * @property string $firstName
+     * @var string $firstName
      */
     private $firstName = null;
 
     /**
-     * @property string $lastName
+     * @var string $lastName
      */
     private $lastName = null;
 
     /**
-     * @property integer $totalOccurrences
+     * @var integer $totalOccurrences
      */
     private $totalOccurrences = null;
 
     /**
-     * @property integer $pastOccurrences
+     * @var integer $pastOccurrences
      */
     private $pastOccurrences = null;
 
     /**
-     * @property string $paymentMethod
+     * @var string $paymentMethod
      */
     private $paymentMethod = null;
 
     /**
-     * @property string $accountNumber
+     * @var string $accountNumber
      */
     private $accountNumber = null;
 
     /**
-     * @property string $invoice
+     * @var string $invoice
      */
     private $invoice = null;
 
     /**
-     * @property float $amount
+     * @var float $amount
      */
     private $amount = null;
 
     /**
-     * @property string $currencyCode
+     * @var string $currencyCode
      */
     private $currencyCode = null;
 
     /**
-     * @property integer $customerProfileId
+     * @var integer $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @property integer $customerPaymentProfileId
+     * @var integer $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @property integer $customerShippingProfileId
+     * @var integer $customerShippingProfileId
      */
     private $customerShippingProfileId = null;
 
@@ -452,7 +452,7 @@ class SubscriptionDetailType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -473,15 +473,15 @@ class SubscriptionDetailType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -521,6 +521,6 @@ class SubscriptionDetailType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

@@ -5,25 +5,25 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing ANetApiRequestType
  *
- * 
+ *
  * XSD Type: ANetApiRequest
  */
 class ANetApiRequestType implements \JsonSerializable
 {
 
     /**
-     * @property \net\authorize\api\contract\v1\MerchantAuthenticationType
+     * @var \net\authorize\api\contract\v1\MerchantAuthenticationType
      * $merchantAuthentication
      */
     private $merchantAuthentication = null;
 
     /**
-     * @property string $clientId
+     * @var string $clientId
      */
     private $clientId = null;
 
     /**
-     * @property string $refId
+     * @var string $refId
      */
     private $refId = null;
 
@@ -103,7 +103,7 @@ class ANetApiRequestType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -124,15 +124,15 @@ class ANetApiRequestType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -172,6 +172,6 @@ class ANetApiRequestType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

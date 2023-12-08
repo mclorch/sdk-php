@@ -5,14 +5,14 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing OrderExType
  *
- * 
+ *
  * XSD Type: orderExType
  */
 class OrderExType extends OrderType implements \JsonSerializable
 {
 
     /**
-     * @property string $purchaseOrderNumber
+     * @var string $purchaseOrderNumber
      */
     private $purchaseOrderNumber = null;
 
@@ -47,7 +47,7 @@ class OrderExType extends OrderType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -75,8 +75,8 @@ class OrderExType extends OrderType implements \JsonSerializable
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -116,6 +116,6 @@ class OrderExType extends OrderType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

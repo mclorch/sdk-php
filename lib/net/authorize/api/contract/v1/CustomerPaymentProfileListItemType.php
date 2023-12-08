@@ -5,44 +5,44 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerPaymentProfileListItemType
  *
- * 
+ *
  * XSD Type: customerPaymentProfileListItemType
  */
 class CustomerPaymentProfileListItemType implements \JsonSerializable
 {
 
     /**
-     * @property boolean $defaultPaymentProfile
+     * @var boolean $defaultPaymentProfile
      */
     private $defaultPaymentProfile = null;
 
     /**
-     * @property integer $customerPaymentProfileId
+     * @var integer $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @property integer $customerProfileId
+     * @var integer $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\CustomerAddressType $billTo
+     * @var \net\authorize\api\contract\v1\CustomerAddressType $billTo
      */
     private $billTo = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\PaymentMaskedType $payment
+     * @var \net\authorize\api\contract\v1\PaymentMaskedType $payment
      */
     private $payment = null;
 
     /**
-     * @property string $originalNetworkTransId
+     * @var string $originalNetworkTransId
      */
     private $originalNetworkTransId = null;
 
     /**
-     * @property float $originalAuthAmount
+     * @var float $originalAuthAmount
      */
     private $originalAuthAmount = null;
 
@@ -209,7 +209,7 @@ class CustomerPaymentProfileListItemType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -230,15 +230,15 @@ class CustomerPaymentProfileListItemType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -278,6 +278,6 @@ class CustomerPaymentProfileListItemType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

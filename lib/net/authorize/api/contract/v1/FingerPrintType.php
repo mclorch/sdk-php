@@ -5,34 +5,34 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing FingerPrintType
  *
- * 
+ *
  * XSD Type: fingerPrintType
  */
 class FingerPrintType implements \JsonSerializable
 {
 
     /**
-     * @property string $hashValue
+     * @var string $hashValue
      */
     private $hashValue = null;
 
     /**
-     * @property string $sequence
+     * @var string $sequence
      */
     private $sequence = null;
 
     /**
-     * @property string $timestamp
+     * @var string $timestamp
      */
     private $timestamp = null;
 
     /**
-     * @property string $currencyCode
+     * @var string $currencyCode
      */
     private $currencyCode = null;
 
     /**
-     * @property string $amount
+     * @var string $amount
      */
     private $amount = null;
 
@@ -155,7 +155,7 @@ class FingerPrintType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -176,15 +176,15 @@ class FingerPrintType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -224,6 +224,6 @@ class FingerPrintType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

@@ -5,24 +5,24 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerProfileIdType
  *
- * 
+ *
  * XSD Type: customerProfileIdType
  */
 class CustomerProfileIdType implements \JsonSerializable
 {
 
     /**
-     * @property string $customerProfileId
+     * @var string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @property string $customerPaymentProfileId
+     * @var string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @property string $customerAddressId
+     * @var string $customerAddressId
      */
     private $customerAddressId = null;
 
@@ -101,7 +101,7 @@ class CustomerProfileIdType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -122,15 +122,15 @@ class CustomerProfileIdType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -170,6 +170,6 @@ class CustomerProfileIdType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

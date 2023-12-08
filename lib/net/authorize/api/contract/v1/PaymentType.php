@@ -5,50 +5,50 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing PaymentType
  *
- * 
+ *
  * XSD Type: paymentType
  */
 class PaymentType implements \JsonSerializable
 {
 
     /**
-     * @property \net\authorize\api\contract\v1\CreditCardType $creditCard
+     * @var \net\authorize\api\contract\v1\CreditCardType $creditCard
      */
     private $creditCard = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\BankAccountType $bankAccount
+     * @var \net\authorize\api\contract\v1\BankAccountType $bankAccount
      */
     private $bankAccount = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\CreditCardTrackType $trackData
+     * @var \net\authorize\api\contract\v1\CreditCardTrackType $trackData
      */
     private $trackData = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\EncryptedTrackDataType
+     * @var \net\authorize\api\contract\v1\EncryptedTrackDataType
      * $encryptedTrackData
      */
     private $encryptedTrackData = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\PayPalType $payPal
+     * @var \net\authorize\api\contract\v1\PayPalType $payPal
      */
     private $payPal = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\OpaqueDataType $opaqueData
+     * @var \net\authorize\api\contract\v1\OpaqueDataType $opaqueData
      */
     private $opaqueData = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\PaymentEmvType $emv
+     * @var \net\authorize\api\contract\v1\PaymentEmvType $emv
      */
     private $emv = null;
 
     /**
-     * @property string $dataSource
+     * @var string $dataSource
      */
     private $dataSource = null;
 
@@ -237,7 +237,7 @@ class PaymentType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -258,15 +258,15 @@ class PaymentType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -306,6 +306,6 @@ class PaymentType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

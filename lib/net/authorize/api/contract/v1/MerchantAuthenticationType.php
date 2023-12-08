@@ -5,55 +5,55 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing MerchantAuthenticationType
  *
- * 
+ *
  * XSD Type: merchantAuthenticationType
  */
 class MerchantAuthenticationType implements \JsonSerializable
 {
 
     /**
-     * @property string $name
+     * @var string $name
      */
     private $name = null;
 
     /**
-     * @property string $transactionKey
+     * @var string $transactionKey
      */
     private $transactionKey = null;
 
     /**
-     * @property string $sessionToken
+     * @var string $sessionToken
      */
     private $sessionToken = null;
 
     /**
-     * @property string $password
+     * @var string $password
      */
     private $password = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ImpersonationAuthenticationType
+     * @var \net\authorize\api\contract\v1\ImpersonationAuthenticationType
      * $impersonationAuthentication
      */
     private $impersonationAuthentication = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\FingerPrintType $fingerPrint
+     * @var \net\authorize\api\contract\v1\FingerPrintType $fingerPrint
      */
     private $fingerPrint = null;
 
     /**
-     * @property string $clientKey
+     * @var string $clientKey
      */
     private $clientKey = null;
 
     /**
-     * @property string $accessToken
+     * @var string $accessToken
      */
     private $accessToken = null;
 
     /**
-     * @property string $mobileDeviceId
+     * @var string $mobileDeviceId
      */
     private $mobileDeviceId = null;
 
@@ -265,7 +265,7 @@ class MerchantAuthenticationType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -286,15 +286,15 @@ class MerchantAuthenticationType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -334,6 +334,6 @@ class MerchantAuthenticationType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

@@ -9,63 +9,63 @@ class GetMerchantDetailsResponse extends ANetApiResponseType
 {
 
     /**
-     * @property boolean $isTestMode
+     * @var boolean $isTestMode
      */
     private $isTestMode = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ProcessorType[] $processors
+     * @var \net\authorize\api\contract\v1\ProcessorType[] $processors
      */
     private $processors = null;
 
     /**
-     * @property string $merchantName
+     * @var string $merchantName
      */
     private $merchantName = null;
 
     /**
-     * @property string $gatewayId
+     * @var string $gatewayId
      */
     private $gatewayId = null;
 
     /**
-     * @property string[] $marketTypes
+     * @var string[] $marketTypes
      */
     private $marketTypes = null;
 
     /**
-     * @property string[] $productCodes
+     * @var string[] $productCodes
      */
     private $productCodes = null;
 
     /**
-     * @property string[] $paymentMethods
+     * @var string[] $paymentMethods
      */
     private $paymentMethods = null;
 
     /**
-     * @property string[] $currencies
+     * @var string[] $currencies
      */
     private $currencies = null;
 
     /**
-     * @property string $publicClientKey
+     * @var string $publicClientKey
      */
     private $publicClientKey = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\CustomerAddressType
+     * @var \net\authorize\api\contract\v1\CustomerAddressType
      * $businessInformation
      */
     private $businessInformation = null;
 
     /**
-     * @property string $merchantTimeZone
+     * @var string $merchantTimeZone
      */
     private $merchantTimeZone = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ContactDetailType[] $contactDetails
+     * @var \net\authorize\api\contract\v1\ContactDetailType[] $contactDetails
      */
     private $contactDetails = null;
 
@@ -544,8 +544,8 @@ class GetMerchantDetailsResponse extends ANetApiResponseType
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -585,6 +585,6 @@ class GetMerchantDetailsResponse extends ANetApiResponseType
 			}
 		}
     }
-    
+
 }
 

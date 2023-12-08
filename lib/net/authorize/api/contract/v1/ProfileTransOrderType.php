@@ -5,66 +5,66 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing ProfileTransOrderType
  *
- * 
+ *
  * XSD Type: profileTransOrderType
  */
 class ProfileTransOrderType extends ProfileTransAmountType implements \JsonSerializable
 {
 
     /**
-     * @property string $customerProfileId
+     * @var string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @property string $customerPaymentProfileId
+     * @var string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @property string $customerShippingAddressId
+     * @var string $customerShippingAddressId
      */
     private $customerShippingAddressId = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\OrderExType $order
+     * @var \net\authorize\api\contract\v1\OrderExType $order
      */
     private $order = null;
 
     /**
-     * @property boolean $taxExempt
+     * @var boolean $taxExempt
      */
     private $taxExempt = null;
 
     /**
-     * @property boolean $recurringBilling
+     * @var boolean $recurringBilling
      */
     private $recurringBilling = null;
 
     /**
-     * @property string $cardCode
+     * @var string $cardCode
      */
     private $cardCode = null;
 
     /**
-     * @property string $splitTenderId
+     * @var string $splitTenderId
      */
     private $splitTenderId = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ProcessingOptionsType
+     * @var \net\authorize\api\contract\v1\ProcessingOptionsType
      * $processingOptions
      */
     private $processingOptions = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\SubsequentAuthInformationType
+     * @var \net\authorize\api\contract\v1\SubsequentAuthInformationType
      * $subsequentAuthInformation
      */
     private $subsequentAuthInformation = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\AuthorizationIndicatorType
+     * @var \net\authorize\api\contract\v1\AuthorizationIndicatorType
      * $authorizationIndicatorType
      */
     private $authorizationIndicatorType = null;
@@ -322,7 +322,7 @@ class ProfileTransOrderType extends ProfileTransAmountType implements \JsonSeria
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -350,8 +350,8 @@ class ProfileTransOrderType extends ProfileTransAmountType implements \JsonSeria
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -391,6 +391,6 @@ class ProfileTransOrderType extends ProfileTransAmountType implements \JsonSeria
 			}
 		}
     }
-    
+
 }
 

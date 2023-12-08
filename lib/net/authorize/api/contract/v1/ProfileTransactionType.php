@@ -5,44 +5,44 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing ProfileTransactionType
  *
- * 
+ *
  * XSD Type: profileTransactionType
  */
 class ProfileTransactionType implements \JsonSerializable
 {
 
     /**
-     * @property \net\authorize\api\contract\v1\ProfileTransAuthCaptureType
+     * @var \net\authorize\api\contract\v1\ProfileTransAuthCaptureType
      * $profileTransAuthCapture
      */
     private $profileTransAuthCapture = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ProfileTransAuthOnlyType
+     * @var \net\authorize\api\contract\v1\ProfileTransAuthOnlyType
      * $profileTransAuthOnly
      */
     private $profileTransAuthOnly = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ProfileTransPriorAuthCaptureType
+     * @var \net\authorize\api\contract\v1\ProfileTransPriorAuthCaptureType
      * $profileTransPriorAuthCapture
      */
     private $profileTransPriorAuthCapture = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ProfileTransCaptureOnlyType
+     * @var \net\authorize\api\contract\v1\ProfileTransCaptureOnlyType
      * $profileTransCaptureOnly
      */
     private $profileTransCaptureOnly = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ProfileTransRefundType
+     * @var \net\authorize\api\contract\v1\ProfileTransRefundType
      * $profileTransRefund
      */
     private $profileTransRefund = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\ProfileTransVoidType $profileTransVoid
+     * @var \net\authorize\api\contract\v1\ProfileTransVoidType $profileTransVoid
      */
     private $profileTransVoid = null;
 
@@ -191,7 +191,7 @@ class ProfileTransactionType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -212,15 +212,15 @@ class ProfileTransactionType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -260,6 +260,6 @@ class ProfileTransactionType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

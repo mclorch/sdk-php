@@ -5,59 +5,59 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing PaymentDetailsType
  *
- * 
+ *
  * XSD Type: paymentDetails
  */
 class PaymentDetailsType implements \JsonSerializable
 {
 
     /**
-     * @property string $currency
+     * @var string $currency
      */
     private $currency = null;
 
     /**
-     * @property string $promoCode
+     * @var string $promoCode
      */
     private $promoCode = null;
 
     /**
-     * @property string $misc
+     * @var string $misc
      */
     private $misc = null;
 
     /**
-     * @property string $giftWrap
+     * @var string $giftWrap
      */
     private $giftWrap = null;
 
     /**
-     * @property string $discount
+     * @var string $discount
      */
     private $discount = null;
 
     /**
-     * @property string $tax
+     * @var string $tax
      */
     private $tax = null;
 
     /**
-     * @property string $shippingHandling
+     * @var string $shippingHandling
      */
     private $shippingHandling = null;
 
     /**
-     * @property string $subTotal
+     * @var string $subTotal
      */
     private $subTotal = null;
 
     /**
-     * @property string $orderID
+     * @var string $orderID
      */
     private $orderID = null;
 
     /**
-     * @property string $amount
+     * @var string $amount
      */
     private $amount = null;
 
@@ -290,7 +290,7 @@ class PaymentDetailsType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -311,15 +311,15 @@ class PaymentDetailsType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -359,6 +359,6 @@ class PaymentDetailsType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

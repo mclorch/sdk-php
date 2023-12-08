@@ -5,99 +5,99 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing OrderType
  *
- * 
+ *
  * XSD Type: orderType
  */
 class OrderType implements \JsonSerializable
 {
 
     /**
-     * @property string $invoiceNumber
+     * @var string $invoiceNumber
      */
     private $invoiceNumber = null;
 
     /**
-     * @property string $description
+     * @var string $description
      */
     private $description = null;
 
     /**
-     * @property float $discountAmount
+     * @var float $discountAmount
      */
     private $discountAmount = null;
 
     /**
-     * @property boolean $taxIsAfterDiscount
+     * @var boolean $taxIsAfterDiscount
      */
     private $taxIsAfterDiscount = null;
 
     /**
-     * @property string $totalTaxTypeCode
+     * @var string $totalTaxTypeCode
      */
     private $totalTaxTypeCode = null;
 
     /**
-     * @property string $purchaserVATRegistrationNumber
+     * @var string $purchaserVATRegistrationNumber
      */
     private $purchaserVATRegistrationNumber = null;
 
     /**
-     * @property string $merchantVATRegistrationNumber
+     * @var string $merchantVATRegistrationNumber
      */
     private $merchantVATRegistrationNumber = null;
 
     /**
-     * @property string $vatInvoiceReferenceNumber
+     * @var string $vatInvoiceReferenceNumber
      */
     private $vatInvoiceReferenceNumber = null;
 
     /**
-     * @property string $purchaserCode
+     * @var string $purchaserCode
      */
     private $purchaserCode = null;
 
     /**
-     * @property string $summaryCommodityCode
+     * @var string $summaryCommodityCode
      */
     private $summaryCommodityCode = null;
 
     /**
-     * @property \DateTime $purchaseOrderDateUTC
+     * @var \DateTime $purchaseOrderDateUTC
      */
     private $purchaseOrderDateUTC = null;
 
     /**
-     * @property string $supplierOrderReference
+     * @var string $supplierOrderReference
      */
     private $supplierOrderReference = null;
 
     /**
-     * @property string $authorizedContactName
+     * @var string $authorizedContactName
      */
     private $authorizedContactName = null;
 
     /**
-     * @property string $cardAcceptorRefNumber
+     * @var string $cardAcceptorRefNumber
      */
     private $cardAcceptorRefNumber = null;
 
     /**
-     * @property string $amexDataTAA1
+     * @var string $amexDataTAA1
      */
     private $amexDataTAA1 = null;
 
     /**
-     * @property string $amexDataTAA2
+     * @var string $amexDataTAA2
      */
     private $amexDataTAA2 = null;
 
     /**
-     * @property string $amexDataTAA3
+     * @var string $amexDataTAA3
      */
     private $amexDataTAA3 = null;
 
     /**
-     * @property string $amexDataTAA4
+     * @var string $amexDataTAA4
      */
     private $amexDataTAA4 = null;
 
@@ -506,7 +506,7 @@ class OrderType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -527,15 +527,15 @@ class OrderType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -575,6 +575,6 @@ class OrderType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

@@ -9,47 +9,47 @@ class SplitTenderPaymentAType implements \JsonSerializable
 {
 
     /**
-     * @property string $transId
+     * @var string $transId
      */
     private $transId = null;
 
     /**
-     * @property string $responseCode
+     * @var string $responseCode
      */
     private $responseCode = null;
 
     /**
-     * @property string $responseToCustomer
+     * @var string $responseToCustomer
      */
     private $responseToCustomer = null;
 
     /**
-     * @property string $authCode
+     * @var string $authCode
      */
     private $authCode = null;
 
     /**
-     * @property string $accountNumber
+     * @var string $accountNumber
      */
     private $accountNumber = null;
 
     /**
-     * @property string $accountType
+     * @var string $accountType
      */
     private $accountType = null;
 
     /**
-     * @property string $requestedAmount
+     * @var string $requestedAmount
      */
     private $requestedAmount = null;
 
     /**
-     * @property string $approvedAmount
+     * @var string $approvedAmount
      */
     private $approvedAmount = null;
 
     /**
-     * @property string $balanceOnCard
+     * @var string $balanceOnCard
      */
     private $balanceOnCard = null;
 
@@ -260,7 +260,7 @@ class SplitTenderPaymentAType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -281,15 +281,15 @@ class SplitTenderPaymentAType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -329,6 +329,6 @@ class SplitTenderPaymentAType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

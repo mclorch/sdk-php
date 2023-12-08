@@ -5,34 +5,34 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing WebCheckOutDataTypeTokenType
  *
- * 
+ *
  * XSD Type: webCheckOutDataTypeToken
  */
 class WebCheckOutDataTypeTokenType implements \JsonSerializable
 {
 
     /**
-     * @property string $cardNumber
+     * @var string $cardNumber
      */
     private $cardNumber = null;
 
     /**
-     * @property string $expirationDate
+     * @var string $expirationDate
      */
     private $expirationDate = null;
 
     /**
-     * @property string $cardCode
+     * @var string $cardCode
      */
     private $cardCode = null;
 
     /**
-     * @property string $zip
+     * @var string $zip
      */
     private $zip = null;
 
     /**
-     * @property string $fullName
+     * @var string $fullName
      */
     private $fullName = null;
 
@@ -155,7 +155,7 @@ class WebCheckOutDataTypeTokenType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -176,15 +176,15 @@ class WebCheckOutDataTypeTokenType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -224,6 +224,6 @@ class WebCheckOutDataTypeTokenType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 

@@ -9,17 +9,17 @@ class MobileDeviceLoginResponse extends ANetApiResponseType
 {
 
     /**
-     * @property \net\authorize\api\contract\v1\MerchantContactType $merchantContact
+     * @var \net\authorize\api\contract\v1\MerchantContactType $merchantContact
      */
     private $merchantContact = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\PermissionType[] $userPermissions
+     * @var \net\authorize\api\contract\v1\PermissionType[] $userPermissions
      */
     private $userPermissions = null;
 
     /**
-     * @property \net\authorize\api\contract\v1\TransRetailInfoType $merchantAccount
+     * @var \net\authorize\api\contract\v1\TransRetailInfoType $merchantAccount
      */
     private $merchantAccount = null;
 
@@ -130,8 +130,8 @@ class MobileDeviceLoginResponse extends ANetApiResponseType
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -171,6 +171,6 @@ class MobileDeviceLoginResponse extends ANetApiResponseType
 			}
 		}
     }
-    
+
 }
 

@@ -5,29 +5,29 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing ProcessingOptionsType
  *
- * 
+ *
  * XSD Type: processingOptions
  */
 class ProcessingOptionsType implements \JsonSerializable
 {
 
     /**
-     * @property boolean $isFirstRecurringPayment
+     * @var boolean $isFirstRecurringPayment
      */
     private $isFirstRecurringPayment = null;
 
     /**
-     * @property boolean $isFirstSubsequentAuth
+     * @var boolean $isFirstSubsequentAuth
      */
     private $isFirstSubsequentAuth = null;
 
     /**
-     * @property boolean $isSubsequentAuth
+     * @var boolean $isSubsequentAuth
      */
     private $isSubsequentAuth = null;
 
     /**
-     * @property boolean $isStoredCredentials
+     * @var boolean $isStoredCredentials
      */
     private $isStoredCredentials = null;
 
@@ -128,7 +128,7 @@ class ProcessingOptionsType implements \JsonSerializable
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -149,15 +149,15 @@ class ProcessingOptionsType implements \JsonSerializable
         }
         return $values;
     }
-    
+
     // Json Set Code
     public function set($data)
     {
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -197,6 +197,6 @@ class ProcessingOptionsType implements \JsonSerializable
 			}
 		}
     }
-    
+
 }
 
