@@ -9,12 +9,12 @@ class ErrorAType implements \JsonSerializable
 {
 
     /**
-     * @var string $errorCode
+     * @property string $errorCode
      */
     private $errorCode = null;
 
     /**
-     * @var string $errorText
+     * @property string $errorText
      */
     private $errorText = null;
 

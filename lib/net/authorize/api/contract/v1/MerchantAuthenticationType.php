@@ -12,48 +12,48 @@ class MerchantAuthenticationType implements \JsonSerializable
 {
 
     /**
-     * @var string $name
+     * @property string $name
      */
     private $name = null;
 
     /**
-     * @var string $transactionKey
+     * @property string $transactionKey
      */
     private $transactionKey = null;
 
     /**
-     * @var string $sessionToken
+     * @property string $sessionToken
      */
     private $sessionToken = null;
 
     /**
-     * @var string $password
+     * @property string $password
      */
     private $password = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ImpersonationAuthenticationType
+     * @property \net\authorize\api\contract\v1\ImpersonationAuthenticationType
      * $impersonationAuthentication
      */
     private $impersonationAuthentication = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\FingerPrintType $fingerPrint
+     * @property \net\authorize\api\contract\v1\FingerPrintType $fingerPrint
      */
     private $fingerPrint = null;
 
     /**
-     * @var string $clientKey
+     * @property string $clientKey
      */
     private $clientKey = null;
 
     /**
-     * @var string $accessToken
+     * @property string $accessToken
      */
     private $accessToken = null;
 
     /**
-     * @var string $mobileDeviceId
+     * @property string $mobileDeviceId
      */
     private $mobileDeviceId = null;
 

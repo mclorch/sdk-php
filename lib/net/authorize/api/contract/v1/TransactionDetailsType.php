@@ -12,264 +12,264 @@ class TransactionDetailsType implements \JsonSerializable
 {
 
     /**
-     * @var string $transId
+     * @property string $transId
      */
     private $transId = null;
 
     /**
-     * @var string $refTransId
+     * @property string $refTransId
      */
     private $refTransId = null;
 
     /**
-     * @var string $splitTenderId
+     * @property string $splitTenderId
      */
     private $splitTenderId = null;
 
     /**
-     * @var \DateTime $submitTimeUTC
+     * @property \DateTime $submitTimeUTC
      */
     private $submitTimeUTC = null;
 
     /**
-     * @var \DateTime $submitTimeLocal
+     * @property \DateTime $submitTimeLocal
      */
     private $submitTimeLocal = null;
 
     /**
-     * @var string $transactionType
+     * @property string $transactionType
      */
     private $transactionType = null;
 
     /**
-     * @var string $transactionStatus
+     * @property string $transactionStatus
      */
     private $transactionStatus = null;
 
     /**
-     * @var integer $responseCode
+     * @property integer $responseCode
      */
     private $responseCode = null;
 
     /**
-     * @var integer $responseReasonCode
+     * @property integer $responseReasonCode
      */
     private $responseReasonCode = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\SubscriptionPaymentType $subscription
+     * @property \net\authorize\api\contract\v1\SubscriptionPaymentType $subscription
      */
     private $subscription = null;
 
     /**
-     * @var string $responseReasonDescription
+     * @property string $responseReasonDescription
      */
     private $responseReasonDescription = null;
 
     /**
-     * @var string $authCode
+     * @property string $authCode
      */
     private $authCode = null;
 
     /**
-     * @var string $aVSResponse
+     * @property string $aVSResponse
      */
     private $aVSResponse = null;
 
     /**
-     * @var string $cardCodeResponse
+     * @property string $cardCodeResponse
      */
     private $cardCodeResponse = null;
 
     /**
-     * @var string $cAVVResponse
+     * @property string $cAVVResponse
      */
     private $cAVVResponse = null;
 
     /**
-     * @var string $fDSFilterAction
+     * @property string $fDSFilterAction
      */
     private $fDSFilterAction = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\FDSFilterType[] $fDSFilters
+     * @property \net\authorize\api\contract\v1\FDSFilterType[] $fDSFilters
      */
     private $fDSFilters = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\BatchDetailsType $batch
+     * @property \net\authorize\api\contract\v1\BatchDetailsType $batch
      */
     private $batch = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\OrderExType $order
+     * @property \net\authorize\api\contract\v1\OrderExType $order
      */
     private $order = null;
 
     /**
-     * @var float $requestedAmount
+     * @property float $requestedAmount
      */
     private $requestedAmount = null;
 
     /**
-     * @var float $authAmount
+     * @property float $authAmount
      */
     private $authAmount = null;
 
     /**
-     * @var float $settleAmount
+     * @property float $settleAmount
      */
     private $settleAmount = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $tax
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $tax
      */
     private $tax = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $shipping
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $shipping
      */
     private $shipping = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $duty
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $duty
      */
     private $duty = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\LineItemType[] $lineItems
+     * @property \net\authorize\api\contract\v1\LineItemType[] $lineItems
      */
     private $lineItems = null;
 
     /**
-     * @var float $prepaidBalanceRemaining
+     * @property float $prepaidBalanceRemaining
      */
     private $prepaidBalanceRemaining = null;
 
     /**
-     * @var boolean $taxExempt
+     * @property boolean $taxExempt
      */
     private $taxExempt = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentMaskedType $payment
+     * @property \net\authorize\api\contract\v1\PaymentMaskedType $payment
      */
     private $payment = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerDataType $customer
+     * @property \net\authorize\api\contract\v1\CustomerDataType $customer
      */
     private $customer = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerAddressType $billTo
+     * @property \net\authorize\api\contract\v1\CustomerAddressType $billTo
      */
     private $billTo = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\NameAndAddressType $shipTo
+     * @property \net\authorize\api\contract\v1\NameAndAddressType $shipTo
      */
     private $shipTo = null;
 
     /**
-     * @var boolean $recurringBilling
+     * @property boolean $recurringBilling
      */
     private $recurringBilling = null;
 
     /**
-     * @var string $customerIP
+     * @property string $customerIP
      */
     private $customerIP = null;
 
     /**
-     * @var string $product
+     * @property string $product
      */
     private $product = null;
 
     /**
-     * @var string $entryMode
+     * @property string $entryMode
      */
     private $entryMode = null;
 
     /**
-     * @var string $marketType
+     * @property string $marketType
      */
     private $marketType = null;
 
     /**
-     * @var string $mobileDeviceId
+     * @property string $mobileDeviceId
      */
     private $mobileDeviceId = null;
 
     /**
-     * @var string $customerSignature
+     * @property string $customerSignature
      */
     private $customerSignature = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ReturnedItemType[] $returnedItems
+     * @property \net\authorize\api\contract\v1\ReturnedItemType[] $returnedItems
      */
     private $returnedItems = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\SolutionType $solution
+     * @property \net\authorize\api\contract\v1\SolutionType $solution
      */
     private $solution = null;
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\TransactionDetailsType\EmvDetailsAType\TagAType[]
      * $emvDetails
      */
     private $emvDetails = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfileIdType $profile
+     * @property \net\authorize\api\contract\v1\CustomerProfileIdType $profile
      */
     private $profile = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $surcharge
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $surcharge
      */
     private $surcharge = null;
 
     /**
-     * @var string $employeeId
+     * @property string $employeeId
      */
     private $employeeId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $tip
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $tip
      */
     private $tip = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\OtherTaxType $otherTax
+     * @property \net\authorize\api\contract\v1\OtherTaxType $otherTax
      */
     private $otherTax = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\NameAndAddressType $shipFrom
+     * @property \net\authorize\api\contract\v1\NameAndAddressType $shipFrom
      */
     private $shipFrom = null;
 
     /**
-     * @var string $networkTransId
+     * @property string $networkTransId
      */
     private $networkTransId = null;
 
     /**
-     * @var string $originalNetworkTransId
+     * @property string $originalNetworkTransId
      */
     private $originalNetworkTransId = null;
 
     /**
-     * @var float $originalAuthAmount
+     * @property float $originalAuthAmount
      */
     private $originalAuthAmount = null;
 
     /**
-     * @var string $authorizationIndicator
+     * @property string $authorizationIndicator
      */
     private $authorizationIndicator = null;
 

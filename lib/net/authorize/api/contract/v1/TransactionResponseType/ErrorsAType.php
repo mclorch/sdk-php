@@ -9,7 +9,7 @@ class ErrorsAType implements \JsonSerializable
 {
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\TransactionResponseType\ErrorsAType\ErrorAType[]
      * $error
      */

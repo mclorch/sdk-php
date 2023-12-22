@@ -12,128 +12,128 @@ class TransactionRequestType implements \JsonSerializable
 {
 
     /**
-     * @var string $transactionType
+     * @property string $transactionType
      */
     private $transactionType = null;
 
     /**
-     * @var float $amount
+     * @property float $amount
      */
     private $amount = null;
 
     /**
-     * @var string $currencyCode
+     * @property string $currencyCode
      */
     private $currencyCode = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentType $payment
+     * @property \net\authorize\api\contract\v1\PaymentType $payment
      */
     private $payment = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfilePaymentType $profile
+     * @property \net\authorize\api\contract\v1\CustomerProfilePaymentType $profile
      */
     private $profile = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\SolutionType $solution
+     * @property \net\authorize\api\contract\v1\SolutionType $solution
      */
     private $solution = null;
 
     /**
-     * @var string $callId
+     * @property string $callId
      */
     private $callId = null;
 
     /**
-     * @var string $terminalNumber
+     * @property string $terminalNumber
      */
     private $terminalNumber = null;
 
     /**
-     * @var string $authCode
+     * @property string $authCode
      */
     private $authCode = null;
 
     /**
-     * @var string $refTransId
+     * @property string $refTransId
      */
     private $refTransId = null;
 
     /**
-     * @var string $splitTenderId
+     * @property string $splitTenderId
      */
     private $splitTenderId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\OrderType $order
+     * @property \net\authorize\api\contract\v1\OrderType $order
      */
     private $order = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\LineItemType[] $lineItems
+     * @property \net\authorize\api\contract\v1\LineItemType[] $lineItems
      */
     private $lineItems = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $tax
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $tax
      */
     private $tax = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $duty
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $duty
      */
     private $duty = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $shipping
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $shipping
      */
     private $shipping = null;
 
     /**
-     * @var boolean $taxExempt
+     * @property boolean $taxExempt
      */
     private $taxExempt = null;
 
     /**
-     * @var string $poNumber
+     * @property string $poNumber
      */
     private $poNumber = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerDataType $customer
+     * @property \net\authorize\api\contract\v1\CustomerDataType $customer
      */
     private $customer = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerAddressType $billTo
+     * @property \net\authorize\api\contract\v1\CustomerAddressType $billTo
      */
     private $billTo = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\NameAndAddressType $shipTo
+     * @property \net\authorize\api\contract\v1\NameAndAddressType $shipTo
      */
     private $shipTo = null;
 
     /**
-     * @var string $customerIP
+     * @property string $customerIP
      */
     private $customerIP = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CcAuthenticationType
+     * @property \net\authorize\api\contract\v1\CcAuthenticationType
      * $cardholderAuthentication
      */
     private $cardholderAuthentication = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\TransRetailInfoType $retail
+     * @property \net\authorize\api\contract\v1\TransRetailInfoType $retail
      */
     private $retail = null;
 
     /**
-     * @var string $employeeId
+     * @property string $employeeId
      */
     private $employeeId = null;
 
@@ -142,59 +142,59 @@ class TransactionRequestType implements \JsonSerializable
      * allowPartialAuth, headerEmailReceipt, footerEmailReceipt, recurringBilling,
      * duplicateWindow, testRequest.
      *
-     * @var \net\authorize\api\contract\v1\SettingType[] $transactionSettings
+     * @property \net\authorize\api\contract\v1\SettingType[] $transactionSettings
      */
     private $transactionSettings = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\UserFieldType[] $userFields
+     * @property \net\authorize\api\contract\v1\UserFieldType[] $userFields
      */
     private $userFields = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $surcharge
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $surcharge
      */
     private $surcharge = null;
 
     /**
-     * @var string $merchantDescriptor
+     * @property string $merchantDescriptor
      */
     private $merchantDescriptor = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\SubMerchantType $subMerchant
+     * @property \net\authorize\api\contract\v1\SubMerchantType $subMerchant
      */
     private $subMerchant = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $tip
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $tip
      */
     private $tip = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ProcessingOptionsType
+     * @property \net\authorize\api\contract\v1\ProcessingOptionsType
      * $processingOptions
      */
     private $processingOptions = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\SubsequentAuthInformationType
+     * @property \net\authorize\api\contract\v1\SubsequentAuthInformationType
      * $subsequentAuthInformation
      */
     private $subsequentAuthInformation = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\OtherTaxType $otherTax
+     * @property \net\authorize\api\contract\v1\OtherTaxType $otherTax
      */
     private $otherTax = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\NameAndAddressType $shipFrom
+     * @property \net\authorize\api\contract\v1\NameAndAddressType $shipFrom
      */
     private $shipFrom = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\AuthorizationIndicatorType
+     * @property \net\authorize\api\contract\v1\AuthorizationIndicatorType
      * $authorizationIndicatorType
      */
     private $authorizationIndicatorType = null;

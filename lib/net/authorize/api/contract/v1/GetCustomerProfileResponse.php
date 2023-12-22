@@ -9,12 +9,12 @@ class GetCustomerProfileResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfileMaskedType $profile
+     * @property \net\authorize\api\contract\v1\CustomerProfileMaskedType $profile
      */
     private $profile = null;
 
     /**
-     * @var string[] $subscriptionIds
+     * @property string[] $subscriptionIds
      */
     private $subscriptionIds = null;
 

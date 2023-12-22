@@ -9,7 +9,7 @@ class UpdateMerchantDetailsRequest extends ANetApiRequestType
 {
 
     /**
-     * @var boolean $isTestMode
+     * @property boolean $isTestMode
      */
     private $isTestMode = null;
 

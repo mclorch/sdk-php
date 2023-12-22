@@ -9,7 +9,7 @@ class GetAUJobSummaryResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\AuResponseType[] $auSummary
+     * @property \net\authorize\api\contract\v1\AuResponseType[] $auSummary
      */
     private $auSummary = null;
 

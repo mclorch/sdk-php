@@ -12,42 +12,42 @@ class ProfileTransRefundType extends ProfileTransAmountType implements \JsonSeri
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string $customerPaymentProfileId
+     * @property string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @var string $customerShippingAddressId
+     * @property string $customerShippingAddressId
      */
     private $customerShippingAddressId = null;
 
     /**
-     * @var string $creditCardNumberMasked
+     * @property string $creditCardNumberMasked
      */
     private $creditCardNumberMasked = null;
 
     /**
-     * @var string $bankRoutingNumberMasked
+     * @property string $bankRoutingNumberMasked
      */
     private $bankRoutingNumberMasked = null;
 
     /**
-     * @var string $bankAccountNumberMasked
+     * @property string $bankAccountNumberMasked
      */
     private $bankAccountNumberMasked = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\OrderExType $order
+     * @property \net\authorize\api\contract\v1\OrderExType $order
      */
     private $order = null;
 
     /**
-     * @var string $transId
+     * @property string $transId
      */
     private $transId = null;
 

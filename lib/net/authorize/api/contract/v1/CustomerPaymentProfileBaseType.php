@@ -12,12 +12,12 @@ class CustomerPaymentProfileBaseType implements \JsonSerializable
 {
 
     /**
-     * @var string $customerType
+     * @property string $customerType
      */
     private $customerType = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerAddressType $billTo
+     * @property \net\authorize\api\contract\v1\CustomerAddressType $billTo
      */
     private $billTo = null;
 

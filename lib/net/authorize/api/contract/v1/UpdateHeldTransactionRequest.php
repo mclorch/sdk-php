@@ -9,7 +9,7 @@ class UpdateHeldTransactionRequest extends ANetApiRequestType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\HeldTransactionRequestType
+     * @property \net\authorize\api\contract\v1\HeldTransactionRequestType
      * $heldTransactionRequest
      */
     private $heldTransactionRequest = null;

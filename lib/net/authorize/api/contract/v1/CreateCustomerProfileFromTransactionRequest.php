@@ -9,32 +9,32 @@ class CreateCustomerProfileFromTransactionRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $transId
+     * @property string $transId
      */
     private $transId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfileBaseType $customer
+     * @property \net\authorize\api\contract\v1\CustomerProfileBaseType $customer
      */
     private $customer = null;
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var boolean $defaultPaymentProfile
+     * @property boolean $defaultPaymentProfile
      */
     private $defaultPaymentProfile = null;
 
     /**
-     * @var boolean $defaultShippingAddress
+     * @property boolean $defaultShippingAddress
      */
     private $defaultShippingAddress = null;
 
     /**
-     * @var string $profileType
+     * @property string $profileType
      */
     private $profileType = null;
 

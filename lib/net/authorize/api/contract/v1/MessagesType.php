@@ -12,12 +12,12 @@ class MessagesType implements \JsonSerializable
 {
 
     /**
-     * @var string $resultCode
+     * @property string $resultCode
      */
     private $resultCode = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\MessagesType\MessageAType[] $message
+     * @property \net\authorize\api\contract\v1\MessagesType\MessageAType[] $message
      */
     private $message = null;
 

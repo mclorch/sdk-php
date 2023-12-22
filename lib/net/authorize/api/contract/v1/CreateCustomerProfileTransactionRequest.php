@@ -9,12 +9,12 @@ class CreateCustomerProfileTransactionRequest extends ANetApiRequestType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\ProfileTransactionType $transaction
+     * @property \net\authorize\api\contract\v1\ProfileTransactionType $transaction
      */
     private $transaction = null;
 
     /**
-     * @var string $extraOptions
+     * @property string $extraOptions
      */
     private $extraOptions = null;
 

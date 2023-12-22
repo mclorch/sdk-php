@@ -9,7 +9,7 @@ class UserFieldsAType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\UserFieldType[] $userField
+     * @property \net\authorize\api\contract\v1\UserFieldType[] $userField
      */
     private $userField = null;
 

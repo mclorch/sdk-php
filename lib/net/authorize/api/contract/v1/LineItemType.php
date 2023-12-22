@@ -12,132 +12,132 @@ class LineItemType implements \JsonSerializable
 {
 
     /**
-     * @var string $itemId
+     * @property string $itemId
      */
     private $itemId = null;
 
     /**
-     * @var string $name
+     * @property string $name
      */
     private $name = null;
 
     /**
-     * @var string $description
+     * @property string $description
      */
     private $description = null;
 
     /**
-     * @var float $quantity
+     * @property float $quantity
      */
     private $quantity = null;
 
     /**
-     * @var float $unitPrice
+     * @property float $unitPrice
      */
     private $unitPrice = null;
 
     /**
-     * @var boolean $taxable
+     * @property boolean $taxable
      */
     private $taxable = null;
 
     /**
-     * @var string $unitOfMeasure
+     * @property string $unitOfMeasure
      */
     private $unitOfMeasure = null;
 
     /**
-     * @var string $typeOfSupply
+     * @property string $typeOfSupply
      */
     private $typeOfSupply = null;
 
     /**
-     * @var float $taxRate
+     * @property float $taxRate
      */
     private $taxRate = null;
 
     /**
-     * @var float $taxAmount
+     * @property float $taxAmount
      */
     private $taxAmount = null;
 
     /**
-     * @var float $nationalTax
+     * @property float $nationalTax
      */
     private $nationalTax = null;
 
     /**
-     * @var float $localTax
+     * @property float $localTax
      */
     private $localTax = null;
 
     /**
-     * @var float $vatRate
+     * @property float $vatRate
      */
     private $vatRate = null;
 
     /**
-     * @var string $alternateTaxId
+     * @property string $alternateTaxId
      */
     private $alternateTaxId = null;
 
     /**
-     * @var string $alternateTaxType
+     * @property string $alternateTaxType
      */
     private $alternateTaxType = null;
 
     /**
-     * @var string $alternateTaxTypeApplied
+     * @property string $alternateTaxTypeApplied
      */
     private $alternateTaxTypeApplied = null;
 
     /**
-     * @var float $alternateTaxRate
+     * @property float $alternateTaxRate
      */
     private $alternateTaxRate = null;
 
     /**
-     * @var float $alternateTaxAmount
+     * @property float $alternateTaxAmount
      */
     private $alternateTaxAmount = null;
 
     /**
-     * @var float $totalAmount
+     * @property float $totalAmount
      */
     private $totalAmount = null;
 
     /**
-     * @var string $commodityCode
+     * @property string $commodityCode
      */
     private $commodityCode = null;
 
     /**
-     * @var string $productCode
+     * @property string $productCode
      */
     private $productCode = null;
 
     /**
-     * @var string $productSKU
+     * @property string $productSKU
      */
     private $productSKU = null;
 
     /**
-     * @var float $discountRate
+     * @property float $discountRate
      */
     private $discountRate = null;
 
     /**
-     * @var float $discountAmount
+     * @property float $discountAmount
      */
     private $discountAmount = null;
 
     /**
-     * @var boolean $taxIncludedInTotal
+     * @property boolean $taxIncludedInTotal
      */
     private $taxIncludedInTotal = null;
 
     /**
-     * @var boolean $taxIsAfterDiscount
+     * @property boolean $taxIsAfterDiscount
      */
     private $taxIsAfterDiscount = null;
 

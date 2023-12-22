@@ -12,32 +12,32 @@ class CreditCardType extends CreditCardSimpleType implements \JsonSerializable
 {
 
     /**
-     * @var string $cardCode
+     * @property string $cardCode
      */
     private $cardCode = null;
 
     /**
-     * @var boolean $isPaymentToken
+     * @property boolean $isPaymentToken
      */
     private $isPaymentToken = null;
 
     /**
-     * @var string $cryptogram
+     * @property string $cryptogram
      */
     private $cryptogram = null;
 
     /**
-     * @var string $tokenRequestorName
+     * @property string $tokenRequestorName
      */
     private $tokenRequestorName = null;
 
     /**
-     * @var string $tokenRequestorId
+     * @property string $tokenRequestorId
      */
     private $tokenRequestorId = null;
 
     /**
-     * @var string $tokenRequestorEci
+     * @property string $tokenRequestorEci
      */
     private $tokenRequestorEci = null;
 

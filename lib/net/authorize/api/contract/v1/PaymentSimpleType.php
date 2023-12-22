@@ -12,12 +12,12 @@ class PaymentSimpleType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CreditCardSimpleType $creditCard
+     * @property \net\authorize\api\contract\v1\CreditCardSimpleType $creditCard
      */
     private $creditCard = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\BankAccountType $bankAccount
+     * @property \net\authorize\api\contract\v1\BankAccountType $bankAccount
      */
     private $bankAccount = null;
 

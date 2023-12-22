@@ -12,32 +12,32 @@ class CreditCardMaskedType implements \JsonSerializable
 {
 
     /**
-     * @var string $cardNumber
+     * @property string $cardNumber
      */
     private $cardNumber = null;
 
     /**
-     * @var string $expirationDate
+     * @property string $expirationDate
      */
     private $expirationDate = null;
 
     /**
-     * @var string $cardType
+     * @property string $cardType
      */
     private $cardType = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CardArtType $cardArt
+     * @property \net\authorize\api\contract\v1\CardArtType $cardArt
      */
     private $cardArt = null;
 
     /**
-     * @var string $issuerNumber
+     * @property string $issuerNumber
      */
     private $issuerNumber = null;
 
     /**
-     * @var boolean $isPaymentToken
+     * @property boolean $isPaymentToken
      */
     private $isPaymentToken = null;
 

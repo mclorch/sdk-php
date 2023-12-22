@@ -12,57 +12,57 @@ class SubMerchantType implements \JsonSerializable
 {
 
     /**
-     * @var string $identifier
+     * @property string $identifier
      */
     private $identifier = null;
 
     /**
-     * @var string $doingBusinessAs
+     * @property string $doingBusinessAs
      */
     private $doingBusinessAs = null;
 
     /**
-     * @var string $paymentServiceProviderName
+     * @property string $paymentServiceProviderName
      */
     private $paymentServiceProviderName = null;
 
     /**
-     * @var string $paymentServiceFacilitator
+     * @property string $paymentServiceFacilitator
      */
     private $paymentServiceFacilitator = null;
 
     /**
-     * @var string $streetAddress
+     * @property string $streetAddress
      */
     private $streetAddress = null;
 
     /**
-     * @var string $phone
+     * @property string $phone
      */
     private $phone = null;
 
     /**
-     * @var string $email
+     * @property string $email
      */
     private $email = null;
 
     /**
-     * @var string $postalCode
+     * @property string $postalCode
      */
     private $postalCode = null;
 
     /**
-     * @var string $city
+     * @property string $city
      */
     private $city = null;
 
     /**
-     * @var string $regionCode
+     * @property string $regionCode
      */
     private $regionCode = null;
 
     /**
-     * @var string $countryCode
+     * @property string $countryCode
      */
     private $countryCode = null;
 

@@ -12,12 +12,12 @@ class ImpersonationAuthenticationType implements \JsonSerializable
 {
 
     /**
-     * @var string $partnerLoginId
+     * @property string $partnerLoginId
      */
     private $partnerLoginId = null;
 
     /**
-     * @var string $partnerTransactionKey
+     * @property string $partnerTransactionKey
      */
     private $partnerTransactionKey = null;
 

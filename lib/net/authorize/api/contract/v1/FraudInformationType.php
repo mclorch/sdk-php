@@ -12,12 +12,12 @@ class FraudInformationType implements \JsonSerializable
 {
 
     /**
-     * @var string[] $fraudFilterList
+     * @property string[] $fraudFilterList
      */
     private $fraudFilterList = null;
 
     /**
-     * @var string $fraudAction
+     * @property string $fraudAction
      */
     private $fraudAction = null;
 

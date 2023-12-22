@@ -12,43 +12,43 @@ class PaymentType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CreditCardType $creditCard
+     * @property \net\authorize\api\contract\v1\CreditCardType $creditCard
      */
     private $creditCard = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\BankAccountType $bankAccount
+     * @property \net\authorize\api\contract\v1\BankAccountType $bankAccount
      */
     private $bankAccount = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CreditCardTrackType $trackData
+     * @property \net\authorize\api\contract\v1\CreditCardTrackType $trackData
      */
     private $trackData = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\EncryptedTrackDataType
+     * @property \net\authorize\api\contract\v1\EncryptedTrackDataType
      * $encryptedTrackData
      */
     private $encryptedTrackData = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PayPalType $payPal
+     * @property \net\authorize\api\contract\v1\PayPalType $payPal
      */
     private $payPal = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\OpaqueDataType $opaqueData
+     * @property \net\authorize\api\contract\v1\OpaqueDataType $opaqueData
      */
     private $opaqueData = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentEmvType $emv
+     * @property \net\authorize\api\contract\v1\PaymentEmvType $emv
      */
     private $emv = null;
 
     /**
-     * @var string $dataSource
+     * @property string $dataSource
      */
     private $dataSource = null;
 

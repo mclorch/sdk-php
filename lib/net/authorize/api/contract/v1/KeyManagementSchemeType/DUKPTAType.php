@@ -9,26 +9,26 @@ class DUKPTAType implements \JsonSerializable
 {
 
     /**
-     * @var string $operation
+     * @property string $operation
      */
     private $operation = null;
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\KeyManagementSchemeType\DUKPTAType\ModeAType
      * $mode
      */
     private $mode = null;
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\KeyManagementSchemeType\DUKPTAType\DeviceInfoAType
      * $deviceInfo
      */
     private $deviceInfo = null;
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\KeyManagementSchemeType\DUKPTAType\EncryptedDataAType
      * $encryptedData
      */

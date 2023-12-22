@@ -9,7 +9,7 @@ class GetCustomerProfileIdsResponse extends ANetApiResponseType
 {
 
     /**
-     * @var string[] $ids
+     * @property string[] $ids
      */
     private $ids = null;
 

@@ -9,7 +9,7 @@ class ARBGetSubscriptionStatusResponse extends ANetApiResponseType
 {
 
     /**
-     * @var string $status
+     * @property string $status
      */
     private $status = null;
 

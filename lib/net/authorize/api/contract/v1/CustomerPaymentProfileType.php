@@ -12,27 +12,27 @@ class CustomerPaymentProfileType extends CustomerPaymentProfileBaseType implemen
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentType $payment
+     * @property \net\authorize\api\contract\v1\PaymentType $payment
      */
     private $payment = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\DriversLicenseType $driversLicense
+     * @property \net\authorize\api\contract\v1\DriversLicenseType $driversLicense
      */
     private $driversLicense = null;
 
     /**
-     * @var string $taxId
+     * @property string $taxId
      */
     private $taxId = null;
 
     /**
-     * @var boolean $defaultPaymentProfile
+     * @property boolean $defaultPaymentProfile
      */
     private $defaultPaymentProfile = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\SubsequentAuthInformationType
+     * @property \net\authorize\api\contract\v1\SubsequentAuthInformationType
      * $subsequentAuthInformation
      */
     private $subsequentAuthInformation = null;

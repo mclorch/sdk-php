@@ -9,12 +9,12 @@ class ARBGetSubscriptionRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $subscriptionId
+     * @property string $subscriptionId
      */
     private $subscriptionId = null;
 
     /**
-     * @var boolean $includeTransactions
+     * @property boolean $includeTransactions
      */
     private $includeTransactions = null;
 

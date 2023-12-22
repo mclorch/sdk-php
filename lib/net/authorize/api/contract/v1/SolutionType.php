@@ -12,17 +12,17 @@ class SolutionType implements \JsonSerializable
 {
 
     /**
-     * @var string $id
+     * @property string $id
      */
     private $id = null;
 
     /**
-     * @var string $name
+     * @property string $name
      */
     private $name = null;
 
     /**
-     * @var string $vendorName
+     * @property string $vendorName
      */
     private $vendorName = null;
 

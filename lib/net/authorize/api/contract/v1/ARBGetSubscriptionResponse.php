@@ -9,7 +9,7 @@ class ARBGetSubscriptionResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\ARBSubscriptionMaskedType $subscription
+     * @property \net\authorize\api\contract\v1\ARBSubscriptionMaskedType $subscription
      */
     private $subscription = null;
 

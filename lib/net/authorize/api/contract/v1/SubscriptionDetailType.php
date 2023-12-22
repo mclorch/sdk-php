@@ -12,82 +12,82 @@ class SubscriptionDetailType implements \JsonSerializable
 {
 
     /**
-     * @var integer $id
+     * @property integer $id
      */
     private $id = null;
 
     /**
-     * @var string $name
+     * @property string $name
      */
     private $name = null;
 
     /**
-     * @var string $status
+     * @property string $status
      */
     private $status = null;
 
     /**
-     * @var \DateTime $createTimeStampUTC
+     * @property \DateTime $createTimeStampUTC
      */
     private $createTimeStampUTC = null;
 
     /**
-     * @var string $firstName
+     * @property string $firstName
      */
     private $firstName = null;
 
     /**
-     * @var string $lastName
+     * @property string $lastName
      */
     private $lastName = null;
 
     /**
-     * @var integer $totalOccurrences
+     * @property integer $totalOccurrences
      */
     private $totalOccurrences = null;
 
     /**
-     * @var integer $pastOccurrences
+     * @property integer $pastOccurrences
      */
     private $pastOccurrences = null;
 
     /**
-     * @var string $paymentMethod
+     * @property string $paymentMethod
      */
     private $paymentMethod = null;
 
     /**
-     * @var string $accountNumber
+     * @property string $accountNumber
      */
     private $accountNumber = null;
 
     /**
-     * @var string $invoice
+     * @property string $invoice
      */
     private $invoice = null;
 
     /**
-     * @var float $amount
+     * @property float $amount
      */
     private $amount = null;
 
     /**
-     * @var string $currencyCode
+     * @property string $currencyCode
      */
     private $currencyCode = null;
 
     /**
-     * @var integer $customerProfileId
+     * @property integer $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var integer $customerPaymentProfileId
+     * @property integer $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @var integer $customerShippingProfileId
+     * @property integer $customerShippingProfileId
      */
     private $customerShippingProfileId = null;
 

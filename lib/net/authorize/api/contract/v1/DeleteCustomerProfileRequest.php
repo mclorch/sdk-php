@@ -9,7 +9,7 @@ class DeleteCustomerProfileRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 

@@ -9,23 +9,23 @@ class GetCustomerPaymentProfileListRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $searchType
+     * @property string $searchType
      */
     private $searchType = null;
 
     /**
-     * @var string $month
+     * @property string $month
      */
     private $month = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerPaymentProfileSortingType
+     * @property \net\authorize\api\contract\v1\CustomerPaymentProfileSortingType
      * $sorting
      */
     private $sorting = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PagingType $paging
+     * @property \net\authorize\api\contract\v1\PagingType $paging
      */
     private $paging = null;
 

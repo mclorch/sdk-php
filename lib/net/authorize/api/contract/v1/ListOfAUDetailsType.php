@@ -12,12 +12,12 @@ class ListOfAUDetailsType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\AuUpdateType[] $auUpdate
+     * @property \net\authorize\api\contract\v1\AuUpdateType[] $auUpdate
      */
     private $auUpdate = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\AuDeleteType[] $auDelete
+     * @property \net\authorize\api\contract\v1\AuDeleteType[] $auDelete
      */
     private $auDelete = null;
 

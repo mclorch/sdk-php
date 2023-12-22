@@ -9,7 +9,7 @@ class UpdateHeldTransactionResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\TransactionResponseType
+     * @property \net\authorize\api\contract\v1\TransactionResponseType
      * $transactionResponse
      */
     private $transactionResponse = null;

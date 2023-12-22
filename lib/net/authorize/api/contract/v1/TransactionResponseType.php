@@ -12,139 +12,139 @@ class TransactionResponseType implements \JsonSerializable
 {
 
     /**
-     * @var string $responseCode
+     * @property string $responseCode
      */
     private $responseCode = null;
 
     /**
-     * @var string $rawResponseCode
+     * @property string $rawResponseCode
      */
     private $rawResponseCode = null;
 
     /**
-     * @var string $authCode
+     * @property string $authCode
      */
     private $authCode = null;
 
     /**
-     * @var string $avsResultCode
+     * @property string $avsResultCode
      */
     private $avsResultCode = null;
 
     /**
-     * @var string $cvvResultCode
+     * @property string $cvvResultCode
      */
     private $cvvResultCode = null;
 
     /**
-     * @var string $cavvResultCode
+     * @property string $cavvResultCode
      */
     private $cavvResultCode = null;
 
     /**
-     * @var string $transId
+     * @property string $transId
      */
     private $transId = null;
 
     /**
-     * @var string $refTransID
+     * @property string $refTransID
      */
     private $refTransID = null;
 
     /**
-     * @var string $transHash
+     * @property string $transHash
      */
     private $transHash = null;
 
     /**
-     * @var string $testRequest
+     * @property string $testRequest
      */
     private $testRequest = null;
 
     /**
-     * @var string $accountNumber
+     * @property string $accountNumber
      */
     private $accountNumber = null;
 
     /**
-     * @var string $entryMode
+     * @property string $entryMode
      */
     private $entryMode = null;
 
     /**
-     * @var string $accountType
+     * @property string $accountType
      */
     private $accountType = null;
 
     /**
-     * @var string $splitTenderId
+     * @property string $splitTenderId
      */
     private $splitTenderId = null;
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\TransactionResponseType\PrePaidCardAType
      * $prePaidCard
      */
     private $prePaidCard = null;
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\TransactionResponseType\MessagesAType\MessageAType[]
      * $messages
      */
     private $messages = null;
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\TransactionResponseType\ErrorsAType\ErrorAType[]
      * $errors
      */
     private $errors = null;
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\TransactionResponseType\SplitTenderPaymentsAType\SplitTenderPaymentAType[]
      * $splitTenderPayments
      */
     private $splitTenderPayments = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\UserFieldType[] $userFields
+     * @property \net\authorize\api\contract\v1\UserFieldType[] $userFields
      */
     private $userFields = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\NameAndAddressType $shipTo
+     * @property \net\authorize\api\contract\v1\NameAndAddressType $shipTo
      */
     private $shipTo = null;
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\TransactionResponseType\SecureAcceptanceAType
      * $secureAcceptance
      */
     private $secureAcceptance = null;
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\TransactionResponseType\EmvResponseAType
      * $emvResponse
      */
     private $emvResponse = null;
 
     /**
-     * @var string $transHashSha2
+     * @property string $transHashSha2
      */
     private $transHashSha2 = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfileIdType $profile
+     * @property \net\authorize\api\contract\v1\CustomerProfileIdType $profile
      */
     private $profile = null;
 
     /**
-     * @var string $networkTransId
+     * @property string $networkTransId
      */
     private $networkTransId = null;
 

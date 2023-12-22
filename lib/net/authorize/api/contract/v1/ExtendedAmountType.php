@@ -12,17 +12,17 @@ class ExtendedAmountType implements \JsonSerializable
 {
 
     /**
-     * @var float $amount
+     * @property float $amount
      */
     private $amount = null;
 
     /**
-     * @var string $name
+     * @property string $name
      */
     private $name = null;
 
     /**
-     * @var string $description
+     * @property string $description
      */
     private $description = null;
 

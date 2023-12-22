@@ -12,42 +12,42 @@ class NameAndAddressType implements \JsonSerializable
 {
 
     /**
-     * @var string $firstName
+     * @property string $firstName
      */
     private $firstName = null;
 
     /**
-     * @var string $lastName
+     * @property string $lastName
      */
     private $lastName = null;
 
     /**
-     * @var string $company
+     * @property string $company
      */
     private $company = null;
 
     /**
-     * @var string $address
+     * @property string $address
      */
     private $address = null;
 
     /**
-     * @var string $city
+     * @property string $city
      */
     private $city = null;
 
     /**
-     * @var string $state
+     * @property string $state
      */
     private $state = null;
 
     /**
-     * @var string $zip
+     * @property string $zip
      */
     private $zip = null;
 
     /**
-     * @var string $country
+     * @property string $country
      */
     private $country = null;
 

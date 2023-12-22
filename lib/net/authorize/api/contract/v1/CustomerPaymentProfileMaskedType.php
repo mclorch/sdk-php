@@ -12,48 +12,48 @@ class CustomerPaymentProfileMaskedType extends CustomerPaymentProfileBaseType im
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string $customerPaymentProfileId
+     * @property string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @var boolean $defaultPaymentProfile
+     * @property boolean $defaultPaymentProfile
      */
     private $defaultPaymentProfile = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentMaskedType $payment
+     * @property \net\authorize\api\contract\v1\PaymentMaskedType $payment
      */
     private $payment = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\DriversLicenseMaskedType
+     * @property \net\authorize\api\contract\v1\DriversLicenseMaskedType
      * $driversLicense
      */
     private $driversLicense = null;
 
     /**
-     * @var string $taxId
+     * @property string $taxId
      */
     private $taxId = null;
 
     /**
-     * @var string[] $subscriptionIds
+     * @property string[] $subscriptionIds
      */
     private $subscriptionIds = null;
 
     /**
-     * @var string $originalNetworkTransId
+     * @property string $originalNetworkTransId
      */
     private $originalNetworkTransId = null;
 
     /**
-     * @var float $originalAuthAmount
+     * @property float $originalAuthAmount
      */
     private $originalAuthAmount = null;
 

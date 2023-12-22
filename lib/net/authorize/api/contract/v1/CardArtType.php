@@ -12,27 +12,27 @@ class CardArtType implements \JsonSerializable
 {
 
     /**
-     * @var string $cardBrand
+     * @property string $cardBrand
      */
     private $cardBrand = null;
 
     /**
-     * @var string $cardImageHeight
+     * @property string $cardImageHeight
      */
     private $cardImageHeight = null;
 
     /**
-     * @var string $cardImageUrl
+     * @property string $cardImageUrl
      */
     private $cardImageUrl = null;
 
     /**
-     * @var string $cardImageWidth
+     * @property string $cardImageWidth
      */
     private $cardImageWidth = null;
 
     /**
-     * @var string $cardType
+     * @property string $cardType
      */
     private $cardType = null;
 

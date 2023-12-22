@@ -9,53 +9,53 @@ class EnumCollection
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfileSummaryType
+     * @property \net\authorize\api\contract\v1\CustomerProfileSummaryType
      * $customerProfileSummaryType
      */
     private $customerProfileSummaryType = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentSimpleType $paymentSimpleType
+     * @property \net\authorize\api\contract\v1\PaymentSimpleType $paymentSimpleType
      */
     private $paymentSimpleType = null;
 
     /**
-     * @var string $accountTypeEnum
+     * @property string $accountTypeEnum
      */
     private $accountTypeEnum = null;
 
     /**
-     * @var string $cardTypeEnum
+     * @property string $cardTypeEnum
      */
     private $cardTypeEnum = null;
 
     /**
-     * @var string $fDSFilterActionEnum
+     * @property string $fDSFilterActionEnum
      */
     private $fDSFilterActionEnum = null;
 
     /**
-     * @var string $permissionsEnum
+     * @property string $permissionsEnum
      */
     private $permissionsEnum = null;
 
     /**
-     * @var string $settingNameEnum
+     * @property string $settingNameEnum
      */
     private $settingNameEnum = null;
 
     /**
-     * @var string $settlementStateEnum
+     * @property string $settlementStateEnum
      */
     private $settlementStateEnum = null;
 
     /**
-     * @var string $transactionStatusEnum
+     * @property string $transactionStatusEnum
      */
     private $transactionStatusEnum = null;
 
     /**
-     * @var string $transactionTypeEnum
+     * @property string $transactionTypeEnum
      */
     private $transactionTypeEnum = null;
 

@@ -9,7 +9,7 @@ class ARBCreateSubscriptionRequest extends ANetApiRequestType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\ARBSubscriptionType $subscription
+     * @property \net\authorize\api\contract\v1\ARBSubscriptionType $subscription
      */
     private $subscription = null;
 

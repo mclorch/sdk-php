@@ -9,7 +9,7 @@ class IsAliveRequest
 {
 
     /**
-     * @var string $refId
+     * @property string $refId
      */
     private $refId = null;
 

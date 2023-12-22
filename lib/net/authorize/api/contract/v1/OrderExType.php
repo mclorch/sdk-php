@@ -12,7 +12,7 @@ class OrderExType extends OrderType implements \JsonSerializable
 {
 
     /**
-     * @var string $purchaseOrderNumber
+     * @property string $purchaseOrderNumber
      */
     private $purchaseOrderNumber = null;
 

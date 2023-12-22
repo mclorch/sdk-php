@@ -12,7 +12,7 @@ class ProfileTransCaptureOnlyType extends ProfileTransOrderType implements \Json
 {
 
     /**
-     * @var string $approvalCode
+     * @property string $approvalCode
      */
     private $approvalCode = null;
 

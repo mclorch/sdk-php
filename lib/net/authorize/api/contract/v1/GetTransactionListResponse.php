@@ -9,12 +9,12 @@ class GetTransactionListResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\TransactionSummaryType[] $transactions
+     * @property \net\authorize\api\contract\v1\TransactionSummaryType[] $transactions
      */
     private $transactions = null;
 
     /**
-     * @var integer $totalNumInResultSet
+     * @property integer $totalNumInResultSet
      */
     private $totalNumInResultSet = null;
 

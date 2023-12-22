@@ -12,87 +12,87 @@ class TransactionSummaryType implements \JsonSerializable
 {
 
     /**
-     * @var string $transId
+     * @property string $transId
      */
     private $transId = null;
 
     /**
-     * @var \DateTime $submitTimeUTC
+     * @property \DateTime $submitTimeUTC
      */
     private $submitTimeUTC = null;
 
     /**
-     * @var \DateTime $submitTimeLocal
+     * @property \DateTime $submitTimeLocal
      */
     private $submitTimeLocal = null;
 
     /**
-     * @var string $transactionStatus
+     * @property string $transactionStatus
      */
     private $transactionStatus = null;
 
     /**
-     * @var string $invoiceNumber
+     * @property string $invoiceNumber
      */
     private $invoiceNumber = null;
 
     /**
-     * @var string $firstName
+     * @property string $firstName
      */
     private $firstName = null;
 
     /**
-     * @var string $lastName
+     * @property string $lastName
      */
     private $lastName = null;
 
     /**
-     * @var string $accountType
+     * @property string $accountType
      */
     private $accountType = null;
 
     /**
-     * @var string $accountNumber
+     * @property string $accountNumber
      */
     private $accountNumber = null;
 
     /**
-     * @var float $settleAmount
+     * @property float $settleAmount
      */
     private $settleAmount = null;
 
     /**
-     * @var string $marketType
+     * @property string $marketType
      */
     private $marketType = null;
 
     /**
-     * @var string $product
+     * @property string $product
      */
     private $product = null;
 
     /**
-     * @var string $mobileDeviceId
+     * @property string $mobileDeviceId
      */
     private $mobileDeviceId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\SubscriptionPaymentType $subscription
+     * @property \net\authorize\api\contract\v1\SubscriptionPaymentType $subscription
      */
     private $subscription = null;
 
     /**
-     * @var boolean $hasReturnedItems
+     * @property boolean $hasReturnedItems
      */
     private $hasReturnedItems = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\FraudInformationType $fraudInformation
+     * @property \net\authorize\api\contract\v1\FraudInformationType $fraudInformation
      */
     private $fraudInformation = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfileIdType $profile
+     * @property \net\authorize\api\contract\v1\CustomerProfileIdType $profile
      */
     private $profile = null;
 

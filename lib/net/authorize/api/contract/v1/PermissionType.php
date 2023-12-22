@@ -12,7 +12,7 @@ class PermissionType implements \JsonSerializable
 {
 
     /**
-     * @var string $permissionName
+     * @property string $permissionName
      */
     private $permissionName = null;
 

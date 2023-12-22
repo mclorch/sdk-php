@@ -12,27 +12,27 @@ class CustomerProfileSummaryType implements \JsonSerializable
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string $description
+     * @property string $description
      */
     private $description = null;
 
     /**
-     * @var string $merchantCustomerId
+     * @property string $merchantCustomerId
      */
     private $merchantCustomerId = null;
 
     /**
-     * @var string $email
+     * @property string $email
      */
     private $email = null;
 
     /**
-     * @var \DateTime $createdDate
+     * @property \DateTime $createdDate
      */
     private $createdDate = null;
 

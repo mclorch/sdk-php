@@ -9,17 +9,17 @@ class GetSettledBatchListRequest extends ANetApiRequestType
 {
 
     /**
-     * @var boolean $includeStatistics
+     * @property boolean $includeStatistics
      */
     private $includeStatistics = null;
 
     /**
-     * @var \DateTime $firstSettlementDate
+     * @property \DateTime $firstSettlementDate
      */
     private $firstSettlementDate = null;
 
     /**
-     * @var \DateTime $lastSettlementDate
+     * @property \DateTime $lastSettlementDate
      */
     private $lastSettlementDate = null;
 

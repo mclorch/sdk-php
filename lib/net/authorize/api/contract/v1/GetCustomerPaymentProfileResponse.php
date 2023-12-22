@@ -9,7 +9,7 @@ class GetCustomerPaymentProfileResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerPaymentProfileMaskedType
+     * @property \net\authorize\api\contract\v1\CustomerPaymentProfileMaskedType
      * $paymentProfile
      */
     private $paymentProfile = null;

@@ -12,7 +12,7 @@ class AuDeleteType extends AuDetailsType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CreditCardMaskedType $creditCard
+     * @property \net\authorize\api\contract\v1\CreditCardMaskedType $creditCard
      */
     private $creditCard = null;
 

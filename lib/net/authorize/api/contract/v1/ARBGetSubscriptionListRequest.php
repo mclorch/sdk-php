@@ -9,18 +9,18 @@ class ARBGetSubscriptionListRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $searchType
+     * @property string $searchType
      */
     private $searchType = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ARBGetSubscriptionListSortingType
+     * @property \net\authorize\api\contract\v1\ARBGetSubscriptionListSortingType
      * $sorting
      */
     private $sorting = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PagingType $paging
+     * @property \net\authorize\api\contract\v1\PagingType $paging
      */
     private $paging = null;
 

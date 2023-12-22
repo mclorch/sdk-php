@@ -12,7 +12,7 @@ class EmailSettingsType extends ArrayOfSettingType implements \JsonSerializable
 {
 
     /**
-     * @var integer $version
+     * @property integer $version
      */
     private $version = null;
 

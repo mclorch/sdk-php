@@ -9,7 +9,7 @@ class ARBUpdateSubscriptionResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfileIdType $profile
+     * @property \net\authorize\api\contract\v1\CustomerProfileIdType $profile
      */
     private $profile = null;
 

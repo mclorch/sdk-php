@@ -9,47 +9,47 @@ class SplitTenderPaymentAType implements \JsonSerializable
 {
 
     /**
-     * @var string $transId
+     * @property string $transId
      */
     private $transId = null;
 
     /**
-     * @var string $responseCode
+     * @property string $responseCode
      */
     private $responseCode = null;
 
     /**
-     * @var string $responseToCustomer
+     * @property string $responseToCustomer
      */
     private $responseToCustomer = null;
 
     /**
-     * @var string $authCode
+     * @property string $authCode
      */
     private $authCode = null;
 
     /**
-     * @var string $accountNumber
+     * @property string $accountNumber
      */
     private $accountNumber = null;
 
     /**
-     * @var string $accountType
+     * @property string $accountType
      */
     private $accountType = null;
 
     /**
-     * @var string $requestedAmount
+     * @property string $requestedAmount
      */
     private $requestedAmount = null;
 
     /**
-     * @var string $approvedAmount
+     * @property string $approvedAmount
      */
     private $approvedAmount = null;
 
     /**
-     * @var string $balanceOnCard
+     * @property string $balanceOnCard
      */
     private $balanceOnCard = null;
 

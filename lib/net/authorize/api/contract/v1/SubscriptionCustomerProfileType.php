@@ -12,13 +12,13 @@ class SubscriptionCustomerProfileType extends CustomerProfileExType implements \
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerPaymentProfileMaskedType
+     * @property \net\authorize\api\contract\v1\CustomerPaymentProfileMaskedType
      * $paymentProfile
      */
     private $paymentProfile = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerAddressExType $shippingProfile
+     * @property \net\authorize\api\contract\v1\CustomerAddressExType $shippingProfile
      */
     private $shippingProfile = null;
 

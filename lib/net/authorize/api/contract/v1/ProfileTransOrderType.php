@@ -12,59 +12,59 @@ class ProfileTransOrderType extends ProfileTransAmountType implements \JsonSeria
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string $customerPaymentProfileId
+     * @property string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @var string $customerShippingAddressId
+     * @property string $customerShippingAddressId
      */
     private $customerShippingAddressId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\OrderExType $order
+     * @property \net\authorize\api\contract\v1\OrderExType $order
      */
     private $order = null;
 
     /**
-     * @var boolean $taxExempt
+     * @property boolean $taxExempt
      */
     private $taxExempt = null;
 
     /**
-     * @var boolean $recurringBilling
+     * @property boolean $recurringBilling
      */
     private $recurringBilling = null;
 
     /**
-     * @var string $cardCode
+     * @property string $cardCode
      */
     private $cardCode = null;
 
     /**
-     * @var string $splitTenderId
+     * @property string $splitTenderId
      */
     private $splitTenderId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ProcessingOptionsType
+     * @property \net\authorize\api\contract\v1\ProcessingOptionsType
      * $processingOptions
      */
     private $processingOptions = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\SubsequentAuthInformationType
+     * @property \net\authorize\api\contract\v1\SubsequentAuthInformationType
      * $subsequentAuthInformation
      */
     private $subsequentAuthInformation = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\AuthorizationIndicatorType
+     * @property \net\authorize\api\contract\v1\AuthorizationIndicatorType
      * $authorizationIndicatorType
      */
     private $authorizationIndicatorType = null;

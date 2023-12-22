@@ -12,22 +12,22 @@ class OpaqueDataType implements \JsonSerializable
 {
 
     /**
-     * @var string $dataDescriptor
+     * @property string $dataDescriptor
      */
     private $dataDescriptor = null;
 
     /**
-     * @var string $dataValue
+     * @property string $dataValue
      */
     private $dataValue = null;
 
     /**
-     * @var string $dataKey
+     * @property string $dataKey
      */
     private $dataKey = null;
 
     /**
-     * @var \DateTime $expirationTimeStamp
+     * @property \DateTime $expirationTimeStamp
      */
     private $expirationTimeStamp = null;
 

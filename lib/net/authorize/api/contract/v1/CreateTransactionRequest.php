@@ -9,7 +9,7 @@ class CreateTransactionRequest extends ANetApiRequestType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\TransactionRequestType
+     * @property \net\authorize\api\contract\v1\TransactionRequestType
      * $transactionRequest
      */
     private $transactionRequest = null;

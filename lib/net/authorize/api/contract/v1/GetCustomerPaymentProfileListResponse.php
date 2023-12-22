@@ -9,12 +9,12 @@ class GetCustomerPaymentProfileListResponse extends ANetApiResponseType
 {
 
     /**
-     * @var integer $totalNumInResultSet
+     * @property integer $totalNumInResultSet
      */
     private $totalNumInResultSet = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerPaymentProfileListItemType[]
+     * @property \net\authorize\api\contract\v1\CustomerPaymentProfileListItemType[]
      * $paymentProfiles
      */
     private $paymentProfiles = null;

@@ -12,32 +12,32 @@ class MerchantContactType implements \JsonSerializable
 {
 
     /**
-     * @var string $merchantName
+     * @property string $merchantName
      */
     private $merchantName = null;
 
     /**
-     * @var string $merchantAddress
+     * @property string $merchantAddress
      */
     private $merchantAddress = null;
 
     /**
-     * @var string $merchantCity
+     * @property string $merchantCity
      */
     private $merchantCity = null;
 
     /**
-     * @var string $merchantState
+     * @property string $merchantState
      */
     private $merchantState = null;
 
     /**
-     * @var string $merchantZip
+     * @property string $merchantZip
      */
     private $merchantZip = null;
 
     /**
-     * @var string $merchantPhone
+     * @property string $merchantPhone
      */
     private $merchantPhone = null;
 

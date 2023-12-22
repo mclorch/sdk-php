@@ -12,7 +12,7 @@ class EncryptedTrackDataType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\KeyBlockType $formOfPayment
+     * @property \net\authorize\api\contract\v1\KeyBlockType $formOfPayment
      */
     private $formOfPayment = null;
 

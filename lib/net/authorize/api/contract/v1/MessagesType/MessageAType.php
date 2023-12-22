@@ -9,12 +9,12 @@ class MessageAType implements \JsonSerializable
 {
 
     /**
-     * @var string $code
+     * @property string $code
      */
     private $code = null;
 
     /**
-     * @var string $text
+     * @property string $text
      */
     private $text = null;
 

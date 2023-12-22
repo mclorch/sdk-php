@@ -12,17 +12,17 @@ class ProcessorType implements \JsonSerializable
 {
 
     /**
-     * @var string $name
+     * @property string $name
      */
     private $name = null;
 
     /**
-     * @var integer $id
+     * @property integer $id
      */
     private $id = null;
 
     /**
-     * @var string[] $cardTypes
+     * @property string[] $cardTypes
      */
     private $cardTypes = null;
 

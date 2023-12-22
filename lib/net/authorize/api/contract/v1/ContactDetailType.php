@@ -12,17 +12,17 @@ class ContactDetailType implements \JsonSerializable
 {
 
     /**
-     * @var string $email
+     * @property string $email
      */
     private $email = null;
 
     /**
-     * @var string $firstName
+     * @property string $firstName
      */
     private $firstName = null;
 
     /**
-     * @var string $lastName
+     * @property string $lastName
      */
     private $lastName = null;
 

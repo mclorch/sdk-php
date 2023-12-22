@@ -12,7 +12,7 @@ class CustomerPaymentProfileExType extends CustomerPaymentProfileType implements
 {
 
     /**
-     * @var string $customerPaymentProfileId
+     * @property string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 

@@ -12,17 +12,17 @@ class ANetApiResponseType implements \JsonSerializable
 {
 
     /**
-     * @var string $refId
+     * @property string $refId
      */
     private $refId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\MessagesType $messages
+     * @property \net\authorize\api\contract\v1\MessagesType $messages
      */
     private $messages = null;
 
     /**
-     * @var string $sessionToken
+     * @property string $sessionToken
      */
     private $sessionToken = null;
 

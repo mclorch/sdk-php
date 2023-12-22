@@ -12,12 +12,12 @@ class SecurePaymentContainerErrorType implements \JsonSerializable
 {
 
     /**
-     * @var string $code
+     * @property string $code
      */
     private $code = null;
 
     /**
-     * @var string $description
+     * @property string $description
      */
     private $description = null;
 

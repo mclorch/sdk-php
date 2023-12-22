@@ -12,17 +12,17 @@ class DriversLicenseMaskedType implements \JsonSerializable
 {
 
     /**
-     * @var string $number
+     * @property string $number
      */
     private $number = null;
 
     /**
-     * @var string $state
+     * @property string $state
      */
     private $state = null;
 
     /**
-     * @var string $dateOfBirth
+     * @property string $dateOfBirth
      */
     private $dateOfBirth = null;
 

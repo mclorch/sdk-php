@@ -9,17 +9,17 @@ class PrePaidCardAType implements \JsonSerializable
 {
 
     /**
-     * @var string $requestedAmount
+     * @property string $requestedAmount
      */
     private $requestedAmount = null;
 
     /**
-     * @var string $approvedAmount
+     * @property string $approvedAmount
      */
     private $approvedAmount = null;
 
     /**
-     * @var string $balanceOnCard
+     * @property string $balanceOnCard
      */
     private $balanceOnCard = null;
 

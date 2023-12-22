@@ -12,7 +12,7 @@ class AuthorizationIndicatorType implements \JsonSerializable
 {
 
     /**
-     * @var string $authorizationIndicator
+     * @property string $authorizationIndicator
      */
     private $authorizationIndicator = null;
 

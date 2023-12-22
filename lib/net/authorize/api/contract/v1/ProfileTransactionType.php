@@ -12,37 +12,37 @@ class ProfileTransactionType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\ProfileTransAuthCaptureType
+     * @property \net\authorize\api\contract\v1\ProfileTransAuthCaptureType
      * $profileTransAuthCapture
      */
     private $profileTransAuthCapture = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ProfileTransAuthOnlyType
+     * @property \net\authorize\api\contract\v1\ProfileTransAuthOnlyType
      * $profileTransAuthOnly
      */
     private $profileTransAuthOnly = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ProfileTransPriorAuthCaptureType
+     * @property \net\authorize\api\contract\v1\ProfileTransPriorAuthCaptureType
      * $profileTransPriorAuthCapture
      */
     private $profileTransPriorAuthCapture = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ProfileTransCaptureOnlyType
+     * @property \net\authorize\api\contract\v1\ProfileTransCaptureOnlyType
      * $profileTransCaptureOnly
      */
     private $profileTransCaptureOnly = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ProfileTransRefundType
+     * @property \net\authorize\api\contract\v1\ProfileTransRefundType
      * $profileTransRefund
      */
     private $profileTransRefund = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ProfileTransVoidType $profileTransVoid
+     * @property \net\authorize\api\contract\v1\ProfileTransVoidType $profileTransVoid
      */
     private $profileTransVoid = null;
 

@@ -12,18 +12,18 @@ class CustomerProfileType extends CustomerProfileBaseType implements \JsonSerial
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerPaymentProfileType[]
+     * @property \net\authorize\api\contract\v1\CustomerPaymentProfileType[]
      * $paymentProfiles
      */
     private $paymentProfiles = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerAddressType[] $shipToList
+     * @property \net\authorize\api\contract\v1\CustomerAddressType[] $shipToList
      */
     private $shipToList = null;
 
     /**
-     * @var string $profileType
+     * @property string $profileType
      */
     private $profileType = null;
 

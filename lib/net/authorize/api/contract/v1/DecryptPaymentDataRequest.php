@@ -9,12 +9,12 @@ class DecryptPaymentDataRequest extends ANetApiRequestType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\OpaqueDataType $opaqueData
+     * @property \net\authorize\api\contract\v1\OpaqueDataType $opaqueData
      */
     private $opaqueData = null;
 
     /**
-     * @var string $callId
+     * @property string $callId
      */
     private $callId = null;
 

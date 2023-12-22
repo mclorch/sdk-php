@@ -9,17 +9,17 @@ class SendCustomerTransactionReceiptRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $transId
+     * @property string $transId
      */
     private $transId = null;
 
     /**
-     * @var string $customerEmail
+     * @property string $customerEmail
      */
     private $customerEmail = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\EmailSettingsType $emailSettings
+     * @property \net\authorize\api\contract\v1\EmailSettingsType $emailSettings
      */
     private $emailSettings = null;
 

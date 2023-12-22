@@ -9,17 +9,17 @@ class GetTransactionDetailsResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\TransactionDetailsType $transaction
+     * @property \net\authorize\api\contract\v1\TransactionDetailsType $transaction
      */
     private $transaction = null;
 
     /**
-     * @var string $clientId
+     * @property string $clientId
      */
     private $clientId = null;
 
     /**
-     * @var string $transrefId
+     * @property string $transrefId
      */
     private $transrefId = null;
 

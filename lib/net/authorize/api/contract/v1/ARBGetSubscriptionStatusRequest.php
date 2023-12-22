@@ -9,7 +9,7 @@ class ARBGetSubscriptionStatusRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $subscriptionId
+     * @property string $subscriptionId
      */
     private $subscriptionId = null;
 

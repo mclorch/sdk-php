@@ -9,7 +9,7 @@ class GetTransactionDetailsRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $transId
+     * @property string $transId
      */
     private $transId = null;
 

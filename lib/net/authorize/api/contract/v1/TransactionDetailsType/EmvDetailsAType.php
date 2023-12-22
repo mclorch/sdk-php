@@ -9,7 +9,7 @@ class EmvDetailsAType implements \JsonSerializable
 {
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\TransactionDetailsType\EmvDetailsAType\TagAType[]
      * $tag
      */

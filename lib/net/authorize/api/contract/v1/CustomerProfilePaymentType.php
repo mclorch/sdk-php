@@ -12,22 +12,22 @@ class CustomerProfilePaymentType implements \JsonSerializable
 {
 
     /**
-     * @var boolean $createProfile
+     * @property boolean $createProfile
      */
     private $createProfile = null;
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentProfileType $paymentProfile
+     * @property \net\authorize\api\contract\v1\PaymentProfileType $paymentProfile
      */
     private $paymentProfile = null;
 
     /**
-     * @var string $shippingProfileId
+     * @property string $shippingProfileId
      */
     private $shippingProfileId = null;
 

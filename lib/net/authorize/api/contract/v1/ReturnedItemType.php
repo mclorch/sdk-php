@@ -12,27 +12,27 @@ class ReturnedItemType implements \JsonSerializable
 {
 
     /**
-     * @var string $id
+     * @property string $id
      */
     private $id = null;
 
     /**
-     * @var \DateTime $dateUTC
+     * @property \DateTime $dateUTC
      */
     private $dateUTC = null;
 
     /**
-     * @var \DateTime $dateLocal
+     * @property \DateTime $dateLocal
      */
     private $dateLocal = null;
 
     /**
-     * @var string $code
+     * @property string $code
      */
     private $code = null;
 
     /**
-     * @var string $description
+     * @property string $description
      */
     private $description = null;
 

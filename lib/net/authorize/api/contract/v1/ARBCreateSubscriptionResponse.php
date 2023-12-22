@@ -9,12 +9,12 @@ class ARBCreateSubscriptionResponse extends ANetApiResponseType
 {
 
     /**
-     * @var string $subscriptionId
+     * @property string $subscriptionId
      */
     private $subscriptionId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfileIdType $profile
+     * @property \net\authorize\api\contract\v1\CustomerProfileIdType $profile
      */
     private $profile = null;
 

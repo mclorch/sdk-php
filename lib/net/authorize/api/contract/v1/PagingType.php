@@ -12,12 +12,12 @@ class PagingType implements \JsonSerializable
 {
 
     /**
-     * @var integer $limit
+     * @property integer $limit
      */
     private $limit = null;
 
     /**
-     * @var integer $offset
+     * @property integer $offset
      */
     private $offset = null;
 

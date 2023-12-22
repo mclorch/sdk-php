@@ -12,22 +12,22 @@ class ProcessingOptionsType implements \JsonSerializable
 {
 
     /**
-     * @var boolean $isFirstRecurringPayment
+     * @property boolean $isFirstRecurringPayment
      */
     private $isFirstRecurringPayment = null;
 
     /**
-     * @var boolean $isFirstSubsequentAuth
+     * @property boolean $isFirstSubsequentAuth
      */
     private $isFirstSubsequentAuth = null;
 
     /**
-     * @var boolean $isSubsequentAuth
+     * @property boolean $isSubsequentAuth
      */
     private $isSubsequentAuth = null;
 
     /**
-     * @var boolean $isStoredCredentials
+     * @property boolean $isStoredCredentials
      */
     private $isStoredCredentials = null;
 

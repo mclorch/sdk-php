@@ -9,22 +9,22 @@ class DecryptPaymentDataResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerAddressType $shippingInfo
+     * @property \net\authorize\api\contract\v1\CustomerAddressType $shippingInfo
      */
     private $shippingInfo = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerAddressType $billingInfo
+     * @property \net\authorize\api\contract\v1\CustomerAddressType $billingInfo
      */
     private $billingInfo = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CreditCardMaskedType $cardInfo
+     * @property \net\authorize\api\contract\v1\CreditCardMaskedType $cardInfo
      */
     private $cardInfo = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentDetailsType $paymentDetails
+     * @property \net\authorize\api\contract\v1\PaymentDetailsType $paymentDetails
      */
     private $paymentDetails = null;
 

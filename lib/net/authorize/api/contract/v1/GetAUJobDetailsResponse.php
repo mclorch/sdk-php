@@ -9,12 +9,12 @@ class GetAUJobDetailsResponse extends ANetApiResponseType
 {
 
     /**
-     * @var integer $totalNumInResultSet
+     * @property integer $totalNumInResultSet
      */
     private $totalNumInResultSet = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ListOfAUDetailsType $auDetails
+     * @property \net\authorize\api\contract\v1\ListOfAUDetailsType $auDetails
      */
     private $auDetails = null;
 

@@ -9,7 +9,7 @@ class SecurePaymentContainerResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\OpaqueDataType $opaqueData
+     * @property \net\authorize\api\contract\v1\OpaqueDataType $opaqueData
      */
     private $opaqueData = null;
 

@@ -12,7 +12,7 @@ class KeyManagementSchemeType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\KeyManagementSchemeType\DUKPTAType
+     * @property \net\authorize\api\contract\v1\KeyManagementSchemeType\DUKPTAType
      * $dUKPT
      */
     private $dUKPT = null;

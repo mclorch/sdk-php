@@ -12,17 +12,17 @@ class CustomerProfileIdType implements \JsonSerializable
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string $customerPaymentProfileId
+     * @property string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @var string $customerAddressId
+     * @property string $customerAddressId
      */
     private $customerAddressId = null;
 

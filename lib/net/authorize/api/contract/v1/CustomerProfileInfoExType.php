@@ -12,7 +12,7 @@ class CustomerProfileInfoExType extends CustomerProfileExType implements \JsonSe
 {
 
     /**
-     * @var string $profileType
+     * @property string $profileType
      */
     private $profileType = null;
 

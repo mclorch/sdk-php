@@ -9,22 +9,22 @@ class CreateCustomerProfileResponse extends ANetApiResponseType
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string[] $customerPaymentProfileIdList
+     * @property string[] $customerPaymentProfileIdList
      */
     private $customerPaymentProfileIdList = null;
 
     /**
-     * @var string[] $customerShippingAddressIdList
+     * @property string[] $customerShippingAddressIdList
      */
     private $customerShippingAddressIdList = null;
 
     /**
-     * @var string[] $validationDirectResponseList
+     * @property string[] $validationDirectResponseList
      */
     private $validationDirectResponseList = null;
 

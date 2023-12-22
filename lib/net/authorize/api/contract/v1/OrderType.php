@@ -12,92 +12,92 @@ class OrderType implements \JsonSerializable
 {
 
     /**
-     * @var string $invoiceNumber
+     * @property string $invoiceNumber
      */
     private $invoiceNumber = null;
 
     /**
-     * @var string $description
+     * @property string $description
      */
     private $description = null;
 
     /**
-     * @var float $discountAmount
+     * @property float $discountAmount
      */
     private $discountAmount = null;
 
     /**
-     * @var boolean $taxIsAfterDiscount
+     * @property boolean $taxIsAfterDiscount
      */
     private $taxIsAfterDiscount = null;
 
     /**
-     * @var string $totalTaxTypeCode
+     * @property string $totalTaxTypeCode
      */
     private $totalTaxTypeCode = null;
 
     /**
-     * @var string $purchaserVATRegistrationNumber
+     * @property string $purchaserVATRegistrationNumber
      */
     private $purchaserVATRegistrationNumber = null;
 
     /**
-     * @var string $merchantVATRegistrationNumber
+     * @property string $merchantVATRegistrationNumber
      */
     private $merchantVATRegistrationNumber = null;
 
     /**
-     * @var string $vatInvoiceReferenceNumber
+     * @property string $vatInvoiceReferenceNumber
      */
     private $vatInvoiceReferenceNumber = null;
 
     /**
-     * @var string $purchaserCode
+     * @property string $purchaserCode
      */
     private $purchaserCode = null;
 
     /**
-     * @var string $summaryCommodityCode
+     * @property string $summaryCommodityCode
      */
     private $summaryCommodityCode = null;
 
     /**
-     * @var \DateTime $purchaseOrderDateUTC
+     * @property \DateTime $purchaseOrderDateUTC
      */
     private $purchaseOrderDateUTC = null;
 
     /**
-     * @var string $supplierOrderReference
+     * @property string $supplierOrderReference
      */
     private $supplierOrderReference = null;
 
     /**
-     * @var string $authorizedContactName
+     * @property string $authorizedContactName
      */
     private $authorizedContactName = null;
 
     /**
-     * @var string $cardAcceptorRefNumber
+     * @property string $cardAcceptorRefNumber
      */
     private $cardAcceptorRefNumber = null;
 
     /**
-     * @var string $amexDataTAA1
+     * @property string $amexDataTAA1
      */
     private $amexDataTAA1 = null;
 
     /**
-     * @var string $amexDataTAA2
+     * @property string $amexDataTAA2
      */
     private $amexDataTAA2 = null;
 
     /**
-     * @var string $amexDataTAA3
+     * @property string $amexDataTAA3
      */
     private $amexDataTAA3 = null;
 
     /**
-     * @var string $amexDataTAA4
+     * @property string $amexDataTAA4
      */
     private $amexDataTAA4 = null;
 

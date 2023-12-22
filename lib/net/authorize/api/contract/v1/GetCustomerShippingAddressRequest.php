@@ -9,12 +9,12 @@ class GetCustomerShippingAddressRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string $customerAddressId
+     * @property string $customerAddressId
      */
     private $customerAddressId = null;
 

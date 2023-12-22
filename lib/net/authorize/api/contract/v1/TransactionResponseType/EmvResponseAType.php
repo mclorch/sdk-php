@@ -9,12 +9,12 @@ class EmvResponseAType implements \JsonSerializable
 {
 
     /**
-     * @var string $tlvData
+     * @property string $tlvData
      */
     private $tlvData = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\EmvTagType[] $tags
+     * @property \net\authorize\api\contract\v1\EmvTagType[] $tags
      */
     private $tags = null;
 

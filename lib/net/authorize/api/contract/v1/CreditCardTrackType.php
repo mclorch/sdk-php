@@ -12,12 +12,12 @@ class CreditCardTrackType implements \JsonSerializable
 {
 
     /**
-     * @var string $track1
+     * @property string $track1
      */
     private $track1 = null;
 
     /**
-     * @var string $track2
+     * @property string $track2
      */
     private $track2 = null;
 

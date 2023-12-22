@@ -9,7 +9,7 @@ class GetHostedPaymentPageRequest extends ANetApiRequestType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\TransactionRequestType
+     * @property \net\authorize\api\contract\v1\TransactionRequestType
      * $transactionRequest
      */
     private $transactionRequest = null;
@@ -22,7 +22,7 @@ class GetHostedPaymentPageRequest extends ANetApiRequestType
      * hostedPaymentSecurityOptions, hostedPaymentCustomerOptions,
      * hostedPaymentStyleOptions
      *
-     * @var \net\authorize\api\contract\v1\SettingType[] $hostedPaymentSettings
+     * @property \net\authorize\api\contract\v1\SettingType[] $hostedPaymentSettings
      */
     private $hostedPaymentSettings = null;
 

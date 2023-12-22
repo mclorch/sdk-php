@@ -9,12 +9,12 @@ class UpdateSplitTenderGroupRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $splitTenderId
+     * @property string $splitTenderId
      */
     private $splitTenderId = null;
 
     /**
-     * @var string $splitTenderStatus
+     * @property string $splitTenderStatus
      */
     private $splitTenderStatus = null;
 

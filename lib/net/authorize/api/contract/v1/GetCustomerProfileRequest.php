@@ -9,27 +9,27 @@ class GetCustomerProfileRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string $merchantCustomerId
+     * @property string $merchantCustomerId
      */
     private $merchantCustomerId = null;
 
     /**
-     * @var string $email
+     * @property string $email
      */
     private $email = null;
 
     /**
-     * @var boolean $unmaskExpirationDate
+     * @property boolean $unmaskExpirationDate
      */
     private $unmaskExpirationDate = null;
 
     /**
-     * @var boolean $includeIssuerInfo
+     * @property boolean $includeIssuerInfo
      */
     private $includeIssuerInfo = null;
 

@@ -9,63 +9,63 @@ class GetMerchantDetailsResponse extends ANetApiResponseType
 {
 
     /**
-     * @var boolean $isTestMode
+     * @property boolean $isTestMode
      */
     private $isTestMode = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ProcessorType[] $processors
+     * @property \net\authorize\api\contract\v1\ProcessorType[] $processors
      */
     private $processors = null;
 
     /**
-     * @var string $merchantName
+     * @property string $merchantName
      */
     private $merchantName = null;
 
     /**
-     * @var string $gatewayId
+     * @property string $gatewayId
      */
     private $gatewayId = null;
 
     /**
-     * @var string[] $marketTypes
+     * @property string[] $marketTypes
      */
     private $marketTypes = null;
 
     /**
-     * @var string[] $productCodes
+     * @property string[] $productCodes
      */
     private $productCodes = null;
 
     /**
-     * @var string[] $paymentMethods
+     * @property string[] $paymentMethods
      */
     private $paymentMethods = null;
 
     /**
-     * @var string[] $currencies
+     * @property string[] $currencies
      */
     private $currencies = null;
 
     /**
-     * @var string $publicClientKey
+     * @property string $publicClientKey
      */
     private $publicClientKey = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerAddressType
+     * @property \net\authorize\api\contract\v1\CustomerAddressType
      * $businessInformation
      */
     private $businessInformation = null;
 
     /**
-     * @var string $merchantTimeZone
+     * @property string $merchantTimeZone
      */
     private $merchantTimeZone = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ContactDetailType[] $contactDetails
+     * @property \net\authorize\api\contract\v1\ContactDetailType[] $contactDetails
      */
     private $contactDetails = null;
 

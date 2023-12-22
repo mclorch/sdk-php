@@ -12,43 +12,43 @@ class ARBSubscriptionMaskedType implements \JsonSerializable
 {
 
     /**
-     * @var string $name
+     * @property string $name
      */
     private $name = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentScheduleType $paymentSchedule
+     * @property \net\authorize\api\contract\v1\PaymentScheduleType $paymentSchedule
      */
     private $paymentSchedule = null;
 
     /**
-     * @var float $amount
+     * @property float $amount
      */
     private $amount = null;
 
     /**
-     * @var float $trialAmount
+     * @property float $trialAmount
      */
     private $trialAmount = null;
 
     /**
-     * @var string $status
+     * @property string $status
      */
     private $status = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\SubscriptionCustomerProfileType
+     * @property \net\authorize\api\contract\v1\SubscriptionCustomerProfileType
      * $profile
      */
     private $profile = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\OrderType $order
+     * @property \net\authorize\api\contract\v1\OrderType $order
      */
     private $order = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ArbTransactionType[] $arbTransactions
+     * @property \net\authorize\api\contract\v1\ArbTransactionType[] $arbTransactions
      */
     private $arbTransactions = null;
 

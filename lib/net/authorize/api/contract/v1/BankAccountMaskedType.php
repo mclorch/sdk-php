@@ -12,32 +12,32 @@ class BankAccountMaskedType implements \JsonSerializable
 {
 
     /**
-     * @var string $accountType
+     * @property string $accountType
      */
     private $accountType = null;
 
     /**
-     * @var string $routingNumber
+     * @property string $routingNumber
      */
     private $routingNumber = null;
 
     /**
-     * @var string $accountNumber
+     * @property string $accountNumber
      */
     private $accountNumber = null;
 
     /**
-     * @var string $nameOnAccount
+     * @property string $nameOnAccount
      */
     private $nameOnAccount = null;
 
     /**
-     * @var string $echeckType
+     * @property string $echeckType
      */
     private $echeckType = null;
 
     /**
-     * @var string $bankName
+     * @property string $bankName
      */
     private $bankName = null;
 

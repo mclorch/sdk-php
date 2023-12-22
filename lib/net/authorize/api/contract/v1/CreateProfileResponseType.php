@@ -12,22 +12,22 @@ class CreateProfileResponseType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\MessagesType $messages
+     * @property \net\authorize\api\contract\v1\MessagesType $messages
      */
     private $messages = null;
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string[] $customerPaymentProfileIdList
+     * @property string[] $customerPaymentProfileIdList
      */
     private $customerPaymentProfileIdList = null;
 
     /**
-     * @var string[] $customerShippingAddressIdList
+     * @property string[] $customerShippingAddressIdList
      */
     private $customerShippingAddressIdList = null;
 

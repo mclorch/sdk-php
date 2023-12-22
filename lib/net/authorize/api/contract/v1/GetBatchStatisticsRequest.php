@@ -9,7 +9,7 @@ class GetBatchStatisticsRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $batchId
+     * @property string $batchId
      */
     private $batchId = null;
 

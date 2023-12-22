@@ -12,37 +12,37 @@ class AuDetailsType implements \JsonSerializable
 {
 
     /**
-     * @var integer $customerProfileID
+     * @property integer $customerProfileID
      */
     private $customerProfileID = null;
 
     /**
-     * @var integer $customerPaymentProfileID
+     * @property integer $customerPaymentProfileID
      */
     private $customerPaymentProfileID = null;
 
     /**
-     * @var string $firstName
+     * @property string $firstName
      */
     private $firstName = null;
 
     /**
-     * @var string $lastName
+     * @property string $lastName
      */
     private $lastName = null;
 
     /**
-     * @var string $updateTimeUTC
+     * @property string $updateTimeUTC
      */
     private $updateTimeUTC = null;
 
     /**
-     * @var string $auReasonCode
+     * @property string $auReasonCode
      */
     private $auReasonCode = null;
 
     /**
-     * @var string $reasonDescription
+     * @property string $reasonDescription
      */
     private $reasonDescription = null;
 

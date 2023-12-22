@@ -9,7 +9,7 @@ class GetAUJobSummaryRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $month
+     * @property string $month
      */
     private $month = null;
 

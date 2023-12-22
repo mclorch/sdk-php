@@ -12,7 +12,7 @@ class CustomerAddressExType extends CustomerAddressType implements \JsonSerializ
 {
 
     /**
-     * @var string $customerAddressId
+     * @property string $customerAddressId
      */
     private $customerAddressId = null;
 

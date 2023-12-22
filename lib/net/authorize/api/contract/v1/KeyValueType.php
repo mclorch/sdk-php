@@ -12,17 +12,17 @@ class KeyValueType implements \JsonSerializable
 {
 
     /**
-     * @var string $encoding
+     * @property string $encoding
      */
     private $encoding = null;
 
     /**
-     * @var string $encryptionAlgorithm
+     * @property string $encryptionAlgorithm
      */
     private $encryptionAlgorithm = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\KeyManagementSchemeType $scheme
+     * @property \net\authorize\api\contract\v1\KeyManagementSchemeType $scheme
      */
     private $scheme = null;
 

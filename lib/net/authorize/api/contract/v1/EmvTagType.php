@@ -12,17 +12,17 @@ class EmvTagType implements \JsonSerializable
 {
 
     /**
-     * @var string $name
+     * @property string $name
      */
     private $name = null;
 
     /**
-     * @var string $value
+     * @property string $value
      */
     private $value = null;
 
     /**
-     * @var string $formatted
+     * @property string $formatted
      */
     private $formatted = null;
 

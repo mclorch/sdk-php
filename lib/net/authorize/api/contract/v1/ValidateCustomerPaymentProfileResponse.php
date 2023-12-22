@@ -9,7 +9,7 @@ class ValidateCustomerPaymentProfileResponse extends ANetApiResponseType
 {
 
     /**
-     * @var string $directResponse
+     * @property string $directResponse
      */
     private $directResponse = null;
 

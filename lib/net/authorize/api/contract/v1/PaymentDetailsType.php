@@ -12,52 +12,52 @@ class PaymentDetailsType implements \JsonSerializable
 {
 
     /**
-     * @var string $currency
+     * @property string $currency
      */
     private $currency = null;
 
     /**
-     * @var string $promoCode
+     * @property string $promoCode
      */
     private $promoCode = null;
 
     /**
-     * @var string $misc
+     * @property string $misc
      */
     private $misc = null;
 
     /**
-     * @var string $giftWrap
+     * @property string $giftWrap
      */
     private $giftWrap = null;
 
     /**
-     * @var string $discount
+     * @property string $discount
      */
     private $discount = null;
 
     /**
-     * @var string $tax
+     * @property string $tax
      */
     private $tax = null;
 
     /**
-     * @var string $shippingHandling
+     * @property string $shippingHandling
      */
     private $shippingHandling = null;
 
     /**
-     * @var string $subTotal
+     * @property string $subTotal
      */
     private $subTotal = null;
 
     /**
-     * @var string $orderID
+     * @property string $orderID
      */
     private $orderID = null;
 
     /**
-     * @var string $amount
+     * @property string $amount
      */
     private $amount = null;
 

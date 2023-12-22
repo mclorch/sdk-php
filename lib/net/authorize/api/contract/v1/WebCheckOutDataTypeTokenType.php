@@ -12,27 +12,27 @@ class WebCheckOutDataTypeTokenType implements \JsonSerializable
 {
 
     /**
-     * @var string $cardNumber
+     * @property string $cardNumber
      */
     private $cardNumber = null;
 
     /**
-     * @var string $expirationDate
+     * @property string $expirationDate
      */
     private $expirationDate = null;
 
     /**
-     * @var string $cardCode
+     * @property string $cardCode
      */
     private $cardCode = null;
 
     /**
-     * @var string $zip
+     * @property string $zip
      */
     private $zip = null;
 
     /**
-     * @var string $fullName
+     * @property string $fullName
      */
     private $fullName = null;
 

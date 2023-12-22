@@ -9,17 +9,17 @@ class GetTransactionListRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $batchId
+     * @property string $batchId
      */
     private $batchId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\TransactionListSortingType $sorting
+     * @property \net\authorize\api\contract\v1\TransactionListSortingType $sorting
      */
     private $sorting = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PagingType $paging
+     * @property \net\authorize\api\contract\v1\PagingType $paging
      */
     private $paging = null;
 

@@ -9,12 +9,12 @@ class TagAType implements \JsonSerializable
 {
 
     /**
-     * @var string $tagId
+     * @property string $tagId
      */
     private $tagId = null;
 
     /**
-     * @var string $data
+     * @property string $data
      */
     private $data = null;
 

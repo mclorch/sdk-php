@@ -12,12 +12,12 @@ class AuUpdateType extends AuDetailsType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CreditCardMaskedType $newCreditCard
+     * @property \net\authorize\api\contract\v1\CreditCardMaskedType $newCreditCard
      */
     private $newCreditCard = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CreditCardMaskedType $oldCreditCard
+     * @property \net\authorize\api\contract\v1\CreditCardMaskedType $oldCreditCard
      */
     private $oldCreditCard = null;
 

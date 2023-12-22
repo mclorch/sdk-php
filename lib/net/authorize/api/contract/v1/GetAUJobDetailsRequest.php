@@ -9,17 +9,17 @@ class GetAUJobDetailsRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $month
+     * @property string $month
      */
     private $month = null;
 
     /**
-     * @var string $modifiedTypeFilter
+     * @property string $modifiedTypeFilter
      */
     private $modifiedTypeFilter = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PagingType $paging
+     * @property \net\authorize\api\contract\v1\PagingType $paging
      */
     private $paging = null;
 

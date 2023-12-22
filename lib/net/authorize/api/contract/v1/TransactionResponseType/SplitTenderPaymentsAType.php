@@ -9,7 +9,7 @@ class SplitTenderPaymentsAType implements \JsonSerializable
 {
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\TransactionResponseType\SplitTenderPaymentsAType\SplitTenderPaymentAType[]
      * $splitTenderPayment
      */

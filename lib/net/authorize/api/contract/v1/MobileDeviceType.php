@@ -12,27 +12,27 @@ class MobileDeviceType implements \JsonSerializable
 {
 
     /**
-     * @var string $mobileDeviceId
+     * @property string $mobileDeviceId
      */
     private $mobileDeviceId = null;
 
     /**
-     * @var string $description
+     * @property string $description
      */
     private $description = null;
 
     /**
-     * @var string $phoneNumber
+     * @property string $phoneNumber
      */
     private $phoneNumber = null;
 
     /**
-     * @var string $devicePlatform
+     * @property string $devicePlatform
      */
     private $devicePlatform = null;
 
     /**
-     * @var string $deviceActivation
+     * @property string $deviceActivation
      */
     private $deviceActivation = null;
 

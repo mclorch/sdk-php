@@ -12,27 +12,27 @@ class ArbTransactionType implements \JsonSerializable
 {
 
     /**
-     * @var string $transId
+     * @property string $transId
      */
     private $transId = null;
 
     /**
-     * @var string $response
+     * @property string $response
      */
     private $response = null;
 
     /**
-     * @var \DateTime $submitTimeUTC
+     * @property \DateTime $submitTimeUTC
      */
     private $submitTimeUTC = null;
 
     /**
-     * @var integer $payNum
+     * @property integer $payNum
      */
     private $payNum = null;
 
     /**
-     * @var integer $attemptNum
+     * @property integer $attemptNum
      */
     private $attemptNum = null;
 

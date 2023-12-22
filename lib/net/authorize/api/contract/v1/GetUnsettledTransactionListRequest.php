@@ -9,17 +9,17 @@ class GetUnsettledTransactionListRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $status
+     * @property string $status
      */
     private $status = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\TransactionListSortingType $sorting
+     * @property \net\authorize\api\contract\v1\TransactionListSortingType $sorting
      */
     private $sorting = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PagingType $paging
+     * @property \net\authorize\api\contract\v1\PagingType $paging
      */
     private $paging = null;
 

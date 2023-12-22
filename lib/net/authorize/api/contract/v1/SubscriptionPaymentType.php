@@ -12,12 +12,12 @@ class SubscriptionPaymentType implements \JsonSerializable
 {
 
     /**
-     * @var integer $id
+     * @property integer $id
      */
     private $id = null;
 
     /**
-     * @var integer $payNum
+     * @property integer $payNum
      */
     private $payNum = null;
 

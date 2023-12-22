@@ -12,12 +12,12 @@ class CcAuthenticationType implements \JsonSerializable
 {
 
     /**
-     * @var string $authenticationIndicator
+     * @property string $authenticationIndicator
      */
     private $authenticationIndicator = null;
 
     /**
-     * @var string $cardholderAuthenticationValue
+     * @property string $cardholderAuthenticationValue
      */
     private $cardholderAuthenticationValue = null;
 

@@ -12,37 +12,37 @@ class CustomerPaymentProfileListItemType implements \JsonSerializable
 {
 
     /**
-     * @var boolean $defaultPaymentProfile
+     * @property boolean $defaultPaymentProfile
      */
     private $defaultPaymentProfile = null;
 
     /**
-     * @var integer $customerPaymentProfileId
+     * @property integer $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @var integer $customerProfileId
+     * @property integer $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerAddressType $billTo
+     * @property \net\authorize\api\contract\v1\CustomerAddressType $billTo
      */
     private $billTo = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentMaskedType $payment
+     * @property \net\authorize\api\contract\v1\PaymentMaskedType $payment
      */
     private $payment = null;
 
     /**
-     * @var string $originalNetworkTransId
+     * @property string $originalNetworkTransId
      */
     private $originalNetworkTransId = null;
 
     /**
-     * @var float $originalAuthAmount
+     * @property float $originalAuthAmount
      */
     private $originalAuthAmount = null;
 

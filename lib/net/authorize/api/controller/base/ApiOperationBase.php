@@ -15,27 +15,27 @@ use \net\authorize\util\LogFactory as LogFactory;
 abstract class ApiOperationBase implements IApiOperation
 {
     /**
-     * @var \net\authorize\api\contract\v1\AnetApiRequestType
+     * @property \net\authorize\api\contract\v1\AnetApiRequestType
      */
     private $apiRequest = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\AnetApiResponseType
+     * @property \net\authorize\api\contract\v1\AnetApiResponseType
      */
     private $apiResponse = null;
 
     /**
-     * @var String
+     * @property String
      */
     private $apiResponseType = '';
 
     /**
-     * @var \JMS\Serializer\Serializer;
+     * @property \JMS\Serializer\Serializer;
      */
     public $serializer = null;
 
     /**
-     * @var \net\authorize\util\HttpClient;
+     * @property \net\authorize\util\HttpClient;
      */
     public $httpClient = null;
     private $logger = null;
@@ -115,14 +115,14 @@ abstract class ApiOperationBase implements IApiOperation
         $this->logger->debug($this->apiRequest);
         // $xmlRequest = $this->serializer->serialize($this->apiRequest, 'xml');
         //$requestArray = [lcfirst((new \ReflectionClass($this->apiRequest))->getShortName()) => $this->apiRequest];
-        
+
         // $requestRoot = (new \net\authorize\api\contract\v1\Mapper)->getXmlName((new \ReflectionClass($this->apiRequest))->getName());
         // $requestRoot = (\net\authorize\api\contract\v1\Mapper::Instance())->getXmlName((new \ReflectionClass($this->apiRequest))->getName());
         $mapper = \net\authorize\util\Mapper::Instance();
         $requestRoot = $mapper->getXmlName((new \ReflectionClass($this->apiRequest))->getName());
 
         $requestArray = [$requestRoot => $this->apiRequest];
-    
+
         $this->logger->info("Request  Creation End");
 
         $this->httpClient->setPostUrl( $endPoint);
@@ -140,7 +140,7 @@ abstract class ApiOperationBase implements IApiOperation
             //decoding json and removing bom
             $possibleBOM = substr($jsonResponse, 0, 3);
             $utfBOM = pack("CCC", 0xef, 0xbb, 0xbf);
-            
+
             if (0 === strncmp($possibleBOM, $utfBOM, 3)) {
                 $response = json_decode( substr($jsonResponse,3), true);
             }
@@ -148,13 +148,13 @@ abstract class ApiOperationBase implements IApiOperation
                 $response = json_decode($jsonResponse, true);
             }
             $this->apiResponse = new $this->apiResponseType();
-            $this->apiResponse->set($response);  
+            $this->apiResponse->set($response);
         }
         else {
             $this->logger->error("Error getting response from API");
             $this->apiResponse = null;
         }
-        
+
         $this->afterExecute();
     }
 

@@ -12,7 +12,7 @@ class ArrayOfSettingType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\SettingType[] $setting
+     * @property \net\authorize\api\contract\v1\SettingType[] $setting
      */
     private $setting = null;
 

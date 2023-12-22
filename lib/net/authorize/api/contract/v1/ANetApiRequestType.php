@@ -12,18 +12,18 @@ class ANetApiRequestType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\MerchantAuthenticationType
+     * @property \net\authorize\api\contract\v1\MerchantAuthenticationType
      * $merchantAuthentication
      */
     private $merchantAuthentication = null;
 
     /**
-     * @var string $clientId
+     * @property string $clientId
      */
     private $clientId = null;
 
     /**
-     * @var string $refId
+     * @property string $refId
      */
     private $refId = null;
 

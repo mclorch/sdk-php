@@ -9,17 +9,17 @@ class MobileDeviceLoginResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\MerchantContactType $merchantContact
+     * @property \net\authorize\api\contract\v1\MerchantContactType $merchantContact
      */
     private $merchantContact = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PermissionType[] $userPermissions
+     * @property \net\authorize\api\contract\v1\PermissionType[] $userPermissions
      */
     private $userPermissions = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\TransRetailInfoType $merchantAccount
+     * @property \net\authorize\api\contract\v1\TransRetailInfoType $merchantAccount
      */
     private $merchantAccount = null;
 

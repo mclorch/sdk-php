@@ -12,27 +12,27 @@ class FingerPrintType implements \JsonSerializable
 {
 
     /**
-     * @var string $hashValue
+     * @property string $hashValue
      */
     private $hashValue = null;
 
     /**
-     * @var string $sequence
+     * @property string $sequence
      */
     private $sequence = null;
 
     /**
-     * @var string $timestamp
+     * @property string $timestamp
      */
     private $timestamp = null;
 
     /**
-     * @var string $currencyCode
+     * @property string $currencyCode
      */
     private $currencyCode = null;
 
     /**
-     * @var string $amount
+     * @property string $amount
      */
     private $amount = null;
 

@@ -9,7 +9,7 @@ class GetSettledBatchListResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\BatchDetailsType[] $batchList
+     * @property \net\authorize\api\contract\v1\BatchDetailsType[] $batchList
      */
     private $batchList = null;
 

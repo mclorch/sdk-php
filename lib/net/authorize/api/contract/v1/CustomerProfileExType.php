@@ -12,7 +12,7 @@ class CustomerProfileExType extends CustomerProfileBaseType implements \JsonSeri
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 

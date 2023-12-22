@@ -9,12 +9,12 @@ class CreateCustomerShippingAddressResponse extends ANetApiResponseType
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string $customerAddressId
+     * @property string $customerAddressId
      */
     private $customerAddressId = null;
 

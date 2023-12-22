@@ -12,12 +12,12 @@ class HeldTransactionRequestType implements \JsonSerializable
 {
 
     /**
-     * @var string $action
+     * @property string $action
      */
     private $action = null;
 
     /**
-     * @var string $refTransId
+     * @property string $refTransId
      */
     private $refTransId = null;
 

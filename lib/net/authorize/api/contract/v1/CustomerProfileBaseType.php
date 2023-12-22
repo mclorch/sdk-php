@@ -12,17 +12,17 @@ class CustomerProfileBaseType implements \JsonSerializable
 {
 
     /**
-     * @var string $merchantCustomerId
+     * @property string $merchantCustomerId
      */
     private $merchantCustomerId = null;
 
     /**
-     * @var string $description
+     * @property string $description
      */
     private $description = null;
 
     /**
-     * @var string $email
+     * @property string $email
      */
     private $email = null;
 

@@ -12,32 +12,32 @@ class PayPalType implements \JsonSerializable
 {
 
     /**
-     * @var string $successUrl
+     * @property string $successUrl
      */
     private $successUrl = null;
 
     /**
-     * @var string $cancelUrl
+     * @property string $cancelUrl
      */
     private $cancelUrl = null;
 
     /**
-     * @var string $paypalLc
+     * @property string $paypalLc
      */
     private $paypalLc = null;
 
     /**
-     * @var string $paypalHdrImg
+     * @property string $paypalHdrImg
      */
     private $paypalHdrImg = null;
 
     /**
-     * @var string $paypalPayflowcolor
+     * @property string $paypalPayflowcolor
      */
     private $paypalPayflowcolor = null;
 
     /**
-     * @var string $payerID
+     * @property string $payerID
      */
     private $payerID = null;
 

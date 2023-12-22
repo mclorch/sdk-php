@@ -12,17 +12,17 @@ class CustomerAddressType extends NameAndAddressType implements \JsonSerializabl
 {
 
     /**
-     * @var string $phoneNumber
+     * @property string $phoneNumber
      */
     private $phoneNumber = null;
 
     /**
-     * @var string $faxNumber
+     * @property string $faxNumber
      */
     private $faxNumber = null;
 
     /**
-     * @var string $email
+     * @property string $email
      */
     private $email = null;
 

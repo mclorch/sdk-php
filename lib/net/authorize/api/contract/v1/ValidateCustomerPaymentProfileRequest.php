@@ -9,27 +9,27 @@ class ValidateCustomerPaymentProfileRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string $customerPaymentProfileId
+     * @property string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @var string $customerShippingAddressId
+     * @property string $customerShippingAddressId
      */
     private $customerShippingAddressId = null;
 
     /**
-     * @var string $cardCode
+     * @property string $cardCode
      */
     private $cardCode = null;
 
     /**
-     * @var string $validationMode
+     * @property string $validationMode
      */
     private $validationMode = null;
 

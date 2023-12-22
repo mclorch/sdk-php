@@ -12,18 +12,18 @@ class CustomerProfileMaskedType extends CustomerProfileExType implements \JsonSe
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerPaymentProfileMaskedType[]
+     * @property \net\authorize\api\contract\v1\CustomerPaymentProfileMaskedType[]
      * $paymentProfiles
      */
     private $paymentProfiles = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerAddressExType[] $shipToList
+     * @property \net\authorize\api\contract\v1\CustomerAddressExType[] $shipToList
      */
     private $shipToList = null;
 
     /**
-     * @var string $profileType
+     * @property string $profileType
      */
     private $profileType = null;
 

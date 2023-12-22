@@ -12,22 +12,22 @@ class ProfileTransVoidType implements \JsonSerializable
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string $customerPaymentProfileId
+     * @property string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @var string $customerShippingAddressId
+     * @property string $customerShippingAddressId
      */
     private $customerShippingAddressId = null;
 
     /**
-     * @var string $transId
+     * @property string $transId
      */
     private $transId = null;
 

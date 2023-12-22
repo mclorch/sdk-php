@@ -12,7 +12,7 @@ class KeyBlockType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\KeyValueType $value
+     * @property \net\authorize\api\contract\v1\KeyValueType $value
      */
     private $value = null;
 

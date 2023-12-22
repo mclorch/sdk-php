@@ -12,22 +12,22 @@ class WebCheckOutDataType implements \JsonSerializable
 {
 
     /**
-     * @var string $type
+     * @property string $type
      */
     private $type = null;
 
     /**
-     * @var string $id
+     * @property string $id
      */
     private $id = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\WebCheckOutDataTypeTokenType $token
+     * @property \net\authorize\api\contract\v1\WebCheckOutDataTypeTokenType $token
      */
     private $token = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\BankAccountType $bankToken
+     * @property \net\authorize\api\contract\v1\BankAccountType $bankToken
      */
     private $bankToken = null;
 

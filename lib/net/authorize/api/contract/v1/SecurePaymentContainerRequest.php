@@ -9,7 +9,7 @@ class SecurePaymentContainerRequest extends ANetApiRequestType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\WebCheckOutDataType $data
+     * @property \net\authorize\api\contract\v1\WebCheckOutDataType $data
      */
     private $data = null;
 

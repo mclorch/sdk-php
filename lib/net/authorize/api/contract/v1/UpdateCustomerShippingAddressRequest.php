@@ -9,17 +9,17 @@ class UpdateCustomerShippingAddressRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerAddressExType $address
+     * @property \net\authorize\api\contract\v1\CustomerAddressExType $address
      */
     private $address = null;
 
     /**
-     * @var boolean $defaultShippingAddress
+     * @property boolean $defaultShippingAddress
      */
     private $defaultShippingAddress = null;
 

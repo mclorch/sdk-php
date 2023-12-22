@@ -12,42 +12,42 @@ class BatchDetailsType implements \JsonSerializable
 {
 
     /**
-     * @var string $batchId
+     * @property string $batchId
      */
     private $batchId = null;
 
     /**
-     * @var \DateTime $settlementTimeUTC
+     * @property \DateTime $settlementTimeUTC
      */
     private $settlementTimeUTC = null;
 
     /**
-     * @var \DateTime $settlementTimeLocal
+     * @property \DateTime $settlementTimeLocal
      */
     private $settlementTimeLocal = null;
 
     /**
-     * @var string $settlementState
+     * @property string $settlementState
      */
     private $settlementState = null;
 
     /**
-     * @var string $paymentMethod
+     * @property string $paymentMethod
      */
     private $paymentMethod = null;
 
     /**
-     * @var string $marketType
+     * @property string $marketType
      */
     private $marketType = null;
 
     /**
-     * @var string $product
+     * @property string $product
      */
     private $product = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\BatchStatisticType[] $statistics
+     * @property \net\authorize\api\contract\v1\BatchStatisticType[] $statistics
      */
     private $statistics = null;
 

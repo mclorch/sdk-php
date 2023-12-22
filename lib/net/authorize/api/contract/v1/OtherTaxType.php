@@ -12,32 +12,32 @@ class OtherTaxType implements \JsonSerializable
 {
 
     /**
-     * @var float $nationalTaxAmount
+     * @property float $nationalTaxAmount
      */
     private $nationalTaxAmount = null;
 
     /**
-     * @var float $localTaxAmount
+     * @property float $localTaxAmount
      */
     private $localTaxAmount = null;
 
     /**
-     * @var float $alternateTaxAmount
+     * @property float $alternateTaxAmount
      */
     private $alternateTaxAmount = null;
 
     /**
-     * @var string $alternateTaxId
+     * @property string $alternateTaxId
      */
     private $alternateTaxId = null;
 
     /**
-     * @var float $vatTaxRate
+     * @property float $vatTaxRate
      */
     private $vatTaxRate = null;
 
     /**
-     * @var float $vatTaxAmount
+     * @property float $vatTaxAmount
      */
     private $vatTaxAmount = null;
 

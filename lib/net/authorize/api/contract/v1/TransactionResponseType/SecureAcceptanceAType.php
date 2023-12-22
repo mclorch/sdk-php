@@ -9,17 +9,17 @@ class SecureAcceptanceAType implements \JsonSerializable
 {
 
     /**
-     * @var string $secureAcceptanceUrl
+     * @property string $secureAcceptanceUrl
      */
     private $secureAcceptanceUrl = null;
 
     /**
-     * @var string $payerID
+     * @property string $payerID
      */
     private $payerID = null;
 
     /**
-     * @var string $payerEmail
+     * @property string $payerEmail
      */
     private $payerEmail = null;
 

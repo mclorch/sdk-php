@@ -9,12 +9,12 @@ class CreateCustomerProfileRequest extends ANetApiRequestType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfileType $profile
+     * @property \net\authorize\api\contract\v1\CustomerProfileType $profile
      */
     private $profile = null;
 
     /**
-     * @var string $validationMode
+     * @property string $validationMode
      */
     private $validationMode = null;
 

@@ -12,17 +12,17 @@ class PaymentMaskedType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CreditCardMaskedType $creditCard
+     * @property \net\authorize\api\contract\v1\CreditCardMaskedType $creditCard
      */
     private $creditCard = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\BankAccountMaskedType $bankAccount
+     * @property \net\authorize\api\contract\v1\BankAccountMaskedType $bankAccount
      */
     private $bankAccount = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\TokenMaskedType $tokenInformation
+     * @property \net\authorize\api\contract\v1\TokenMaskedType $tokenInformation
      */
     private $tokenInformation = null;
 

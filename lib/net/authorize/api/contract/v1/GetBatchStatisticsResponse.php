@@ -9,7 +9,7 @@ class GetBatchStatisticsResponse extends ANetApiResponseType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\BatchDetailsType $batch
+     * @property \net\authorize\api\contract\v1\BatchDetailsType $batch
      */
     private $batch = null;
 

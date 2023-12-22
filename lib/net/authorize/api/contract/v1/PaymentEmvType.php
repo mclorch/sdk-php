@@ -12,17 +12,17 @@ class PaymentEmvType implements \JsonSerializable
 {
 
     /**
-     * @var mixed $emvData
+     * @property mixed $emvData
      */
     private $emvData = null;
 
     /**
-     * @var mixed $emvDescriptor
+     * @property mixed $emvDescriptor
      */
     private $emvDescriptor = null;
 
     /**
-     * @var mixed $emvVersion
+     * @property mixed $emvVersion
      */
     private $emvVersion = null;
 

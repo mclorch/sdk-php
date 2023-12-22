@@ -12,17 +12,17 @@ class AuResponseType implements \JsonSerializable
 {
 
     /**
-     * @var string $auReasonCode
+     * @property string $auReasonCode
      */
     private $auReasonCode = null;
 
     /**
-     * @var integer $profileCount
+     * @property integer $profileCount
      */
     private $profileCount = null;
 
     /**
-     * @var string $reasonDescription
+     * @property string $reasonDescription
      */
     private $reasonDescription = null;
 

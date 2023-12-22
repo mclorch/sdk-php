@@ -12,37 +12,37 @@ class CustomerType implements \JsonSerializable
 {
 
     /**
-     * @var string $type
+     * @property string $type
      */
     private $type = null;
 
     /**
-     * @var string $id
+     * @property string $id
      */
     private $id = null;
 
     /**
-     * @var string $email
+     * @property string $email
      */
     private $email = null;
 
     /**
-     * @var string $phoneNumber
+     * @property string $phoneNumber
      */
     private $phoneNumber = null;
 
     /**
-     * @var string $faxNumber
+     * @property string $faxNumber
      */
     private $faxNumber = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\DriversLicenseType $driversLicense
+     * @property \net\authorize\api\contract\v1\DriversLicenseType $driversLicense
      */
     private $driversLicense = null;
 
     /**
-     * @var string $taxId
+     * @property string $taxId
      */
     private $taxId = null;
 

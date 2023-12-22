@@ -9,7 +9,7 @@ class EncryptedDataAType implements \JsonSerializable
 {
 
     /**
-     * @var string $value
+     * @property string $value
      */
     private $value = null;
 

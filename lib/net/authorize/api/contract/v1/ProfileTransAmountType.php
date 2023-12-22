@@ -12,27 +12,27 @@ class ProfileTransAmountType implements \JsonSerializable
 {
 
     /**
-     * @var float $amount
+     * @property float $amount
      */
     private $amount = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $tax
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $tax
      */
     private $tax = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $shipping
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $shipping
      */
     private $shipping = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ExtendedAmountType $duty
+     * @property \net\authorize\api\contract\v1\ExtendedAmountType $duty
      */
     private $duty = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\LineItemType[] $lineItems
+     * @property \net\authorize\api\contract\v1\LineItemType[] $lineItems
      */
     private $lineItems = null;
 

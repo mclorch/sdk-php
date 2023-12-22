@@ -12,12 +12,12 @@ class SettingType implements \JsonSerializable
 {
 
     /**
-     * @var string $settingName
+     * @property string $settingName
      */
     private $settingName = null;
 
     /**
-     * @var string $settingValue
+     * @property string $settingValue
      */
     private $settingValue = null;
 

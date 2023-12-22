@@ -9,7 +9,7 @@ class UpdateCustomerProfileRequest extends ANetApiRequestType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfileExType $profile
+     * @property \net\authorize\api\contract\v1\CustomerProfileExType $profile
      */
     private $profile = null;
 

@@ -9,12 +9,12 @@ class ARBUpdateSubscriptionRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $subscriptionId
+     * @property string $subscriptionId
      */
     private $subscriptionId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\ARBSubscriptionType $subscription
+     * @property \net\authorize\api\contract\v1\ARBSubscriptionType $subscription
      */
     private $subscription = null;
 

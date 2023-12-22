@@ -9,7 +9,7 @@ class MessagesAType implements \JsonSerializable
 {
 
     /**
-     * @var
+     * @property
      * \net\authorize\api\contract\v1\TransactionResponseType\MessagesAType\MessageAType[]
      * $message
      */

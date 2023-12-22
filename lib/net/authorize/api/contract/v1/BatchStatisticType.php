@@ -12,107 +12,107 @@ class BatchStatisticType implements \JsonSerializable
 {
 
     /**
-     * @var string $accountType
+     * @property string $accountType
      */
     private $accountType = null;
 
     /**
-     * @var float $chargeAmount
+     * @property float $chargeAmount
      */
     private $chargeAmount = null;
 
     /**
-     * @var integer $chargeCount
+     * @property integer $chargeCount
      */
     private $chargeCount = null;
 
     /**
-     * @var float $refundAmount
+     * @property float $refundAmount
      */
     private $refundAmount = null;
 
     /**
-     * @var integer $refundCount
+     * @property integer $refundCount
      */
     private $refundCount = null;
 
     /**
-     * @var integer $voidCount
+     * @property integer $voidCount
      */
     private $voidCount = null;
 
     /**
-     * @var integer $declineCount
+     * @property integer $declineCount
      */
     private $declineCount = null;
 
     /**
-     * @var integer $errorCount
+     * @property integer $errorCount
      */
     private $errorCount = null;
 
     /**
-     * @var float $returnedItemAmount
+     * @property float $returnedItemAmount
      */
     private $returnedItemAmount = null;
 
     /**
-     * @var integer $returnedItemCount
+     * @property integer $returnedItemCount
      */
     private $returnedItemCount = null;
 
     /**
-     * @var float $chargebackAmount
+     * @property float $chargebackAmount
      */
     private $chargebackAmount = null;
 
     /**
-     * @var integer $chargebackCount
+     * @property integer $chargebackCount
      */
     private $chargebackCount = null;
 
     /**
-     * @var integer $correctionNoticeCount
+     * @property integer $correctionNoticeCount
      */
     private $correctionNoticeCount = null;
 
     /**
-     * @var float $chargeChargeBackAmount
+     * @property float $chargeChargeBackAmount
      */
     private $chargeChargeBackAmount = null;
 
     /**
-     * @var integer $chargeChargeBackCount
+     * @property integer $chargeChargeBackCount
      */
     private $chargeChargeBackCount = null;
 
     /**
-     * @var float $refundChargeBackAmount
+     * @property float $refundChargeBackAmount
      */
     private $refundChargeBackAmount = null;
 
     /**
-     * @var integer $refundChargeBackCount
+     * @property integer $refundChargeBackCount
      */
     private $refundChargeBackCount = null;
 
     /**
-     * @var float $chargeReturnedItemsAmount
+     * @property float $chargeReturnedItemsAmount
      */
     private $chargeReturnedItemsAmount = null;
 
     /**
-     * @var integer $chargeReturnedItemsCount
+     * @property integer $chargeReturnedItemsCount
      */
     private $chargeReturnedItemsCount = null;
 
     /**
-     * @var float $refundReturnedItemsAmount
+     * @property float $refundReturnedItemsAmount
      */
     private $refundReturnedItemsAmount = null;
 
     /**
-     * @var integer $refundReturnedItemsCount
+     * @property integer $refundReturnedItemsCount
      */
     private $refundReturnedItemsCount = null;
 

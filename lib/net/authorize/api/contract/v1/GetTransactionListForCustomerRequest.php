@@ -9,22 +9,22 @@ class GetTransactionListForCustomerRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var string $customerPaymentProfileId
+     * @property string $customerPaymentProfileId
      */
     private $customerPaymentProfileId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\TransactionListSortingType $sorting
+     * @property \net\authorize\api\contract\v1\TransactionListSortingType $sorting
      */
     private $sorting = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PagingType $paging
+     * @property \net\authorize\api\contract\v1\PagingType $paging
      */
     private $paging = null;
 

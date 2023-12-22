@@ -9,7 +9,7 @@ class GetHostedProfilePageRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
@@ -21,7 +21,7 @@ class GetHostedProfilePageRequest extends ANetApiRequestType
      * hostedProfileBillingAddressOptions, hostedProfileManageOptions,
      * hostedProfilePaymentOptions, hostedProfileSaveButtonText.
      *
-     * @var \net\authorize\api\contract\v1\SettingType[] $hostedProfileSettings
+     * @property \net\authorize\api\contract\v1\SettingType[] $hostedProfileSettings
      */
     private $hostedProfileSettings = null;
 

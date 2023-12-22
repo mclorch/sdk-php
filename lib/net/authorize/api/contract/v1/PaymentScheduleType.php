@@ -12,23 +12,23 @@ class PaymentScheduleType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentScheduleType\IntervalAType
+     * @property \net\authorize\api\contract\v1\PaymentScheduleType\IntervalAType
      * $interval
      */
     private $interval = null;
 
     /**
-     * @var \DateTime $startDate
+     * @property \DateTime $startDate
      */
     private $startDate = null;
 
     /**
-     * @var integer $totalOccurrences
+     * @property integer $totalOccurrences
      */
     private $totalOccurrences = null;
 
     /**
-     * @var integer $trialOccurrences
+     * @property integer $trialOccurrences
      */
     private $trialOccurrences = null;
 

@@ -9,7 +9,7 @@ class MobileDeviceRegistrationRequest extends ANetApiRequestType
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\MobileDeviceType $mobileDevice
+     * @property \net\authorize\api\contract\v1\MobileDeviceType $mobileDevice
      */
     private $mobileDevice = null;
 

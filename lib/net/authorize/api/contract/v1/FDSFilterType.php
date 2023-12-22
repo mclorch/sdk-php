@@ -12,12 +12,12 @@ class FDSFilterType implements \JsonSerializable
 {
 
     /**
-     * @var string $name
+     * @property string $name
      */
     private $name = null;
 
     /**
-     * @var string $action
+     * @property string $action
      */
     private $action = null;
 

@@ -12,22 +12,22 @@ class TokenMaskedType implements \JsonSerializable
 {
 
     /**
-     * @var string $tokenSource
+     * @property string $tokenSource
      */
     private $tokenSource = null;
 
     /**
-     * @var string $tokenNumber
+     * @property string $tokenNumber
      */
     private $tokenNumber = null;
 
     /**
-     * @var string $expirationDate
+     * @property string $expirationDate
      */
     private $expirationDate = null;
 
     /**
-     * @var string $tokenRequestorId
+     * @property string $tokenRequestorId
      */
     private $tokenRequestorId = null;
 

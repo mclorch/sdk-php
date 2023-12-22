@@ -12,17 +12,17 @@ class SubsequentAuthInformationType implements \JsonSerializable
 {
 
     /**
-     * @var string $originalNetworkTransId
+     * @property string $originalNetworkTransId
      */
     private $originalNetworkTransId = null;
 
     /**
-     * @var float $originalAuthAmount
+     * @property float $originalAuthAmount
      */
     private $originalAuthAmount = null;
 
     /**
-     * @var string $reason
+     * @property string $reason
      */
     private $reason = null;
 

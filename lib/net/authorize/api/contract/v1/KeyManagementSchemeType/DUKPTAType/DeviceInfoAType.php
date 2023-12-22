@@ -9,7 +9,7 @@ class DeviceInfoAType implements \JsonSerializable
 {
 
     /**
-     * @var string $description
+     * @property string $description
      */
     private $description = null;
 

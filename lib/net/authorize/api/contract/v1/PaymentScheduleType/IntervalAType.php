@@ -9,12 +9,12 @@ class IntervalAType implements \JsonSerializable
 {
 
     /**
-     * @var integer $length
+     * @property integer $length
      */
     private $length = null;
 
     /**
-     * @var string $unit
+     * @property string $unit
      */
     private $unit = null;
 

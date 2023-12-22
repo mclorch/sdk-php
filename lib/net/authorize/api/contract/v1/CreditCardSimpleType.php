@@ -12,12 +12,12 @@ class CreditCardSimpleType implements \JsonSerializable
 {
 
     /**
-     * @var string $cardNumber
+     * @property string $cardNumber
      */
     private $cardNumber = null;
 
     /**
-     * @var string $expirationDate
+     * @property string $expirationDate
      */
     private $expirationDate = null;
 

@@ -9,12 +9,12 @@ class ARBGetSubscriptionListResponse extends ANetApiResponseType
 {
 
     /**
-     * @var integer $totalNumInResultSet
+     * @property integer $totalNumInResultSet
      */
     private $totalNumInResultSet = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\SubscriptionDetailType[]
+     * @property \net\authorize\api\contract\v1\SubscriptionDetailType[]
      * $subscriptionDetails
      */
     private $subscriptionDetails = null;

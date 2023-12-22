@@ -12,52 +12,52 @@ class ARBSubscriptionType implements \JsonSerializable
 {
 
     /**
-     * @var string $name
+     * @property string $name
      */
     private $name = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentScheduleType $paymentSchedule
+     * @property \net\authorize\api\contract\v1\PaymentScheduleType $paymentSchedule
      */
     private $paymentSchedule = null;
 
     /**
-     * @var float $amount
+     * @property float $amount
      */
     private $amount = null;
 
     /**
-     * @var float $trialAmount
+     * @property float $trialAmount
      */
     private $trialAmount = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\PaymentType $payment
+     * @property \net\authorize\api\contract\v1\PaymentType $payment
      */
     private $payment = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\OrderType $order
+     * @property \net\authorize\api\contract\v1\OrderType $order
      */
     private $order = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerType $customer
+     * @property \net\authorize\api\contract\v1\CustomerType $customer
      */
     private $customer = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\NameAndAddressType $billTo
+     * @property \net\authorize\api\contract\v1\NameAndAddressType $billTo
      */
     private $billTo = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\NameAndAddressType $shipTo
+     * @property \net\authorize\api\contract\v1\NameAndAddressType $shipTo
      */
     private $shipTo = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerProfileIdType $profile
+     * @property \net\authorize\api\contract\v1\CustomerProfileIdType $profile
      */
     private $profile = null;
 

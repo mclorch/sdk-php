@@ -12,12 +12,12 @@ class PaymentProfileType implements \JsonSerializable
 {
 
     /**
-     * @var string $paymentProfileId
+     * @property string $paymentProfileId
      */
     private $paymentProfileId = null;
 
     /**
-     * @var string $cardCode
+     * @property string $cardCode
      */
     private $cardCode = null;
 

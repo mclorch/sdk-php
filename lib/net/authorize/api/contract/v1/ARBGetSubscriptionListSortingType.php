@@ -12,12 +12,12 @@ class ARBGetSubscriptionListSortingType implements \JsonSerializable
 {
 
     /**
-     * @var string $orderBy
+     * @property string $orderBy
      */
     private $orderBy = null;
 
     /**
-     * @var boolean $orderDescending
+     * @property boolean $orderDescending
      */
     private $orderDescending = null;
 

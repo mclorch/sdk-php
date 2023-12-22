@@ -12,22 +12,22 @@ class TransRetailInfoType implements \JsonSerializable
 {
 
     /**
-     * @var string $marketType
+     * @property string $marketType
      */
     private $marketType = null;
 
     /**
-     * @var string $deviceType
+     * @property string $deviceType
      */
     private $deviceType = null;
 
     /**
-     * @var string $customerSignature
+     * @property string $customerSignature
      */
     private $customerSignature = null;
 
     /**
-     * @var string $terminalNumber
+     * @property string $terminalNumber
      */
     private $terminalNumber = null;
 

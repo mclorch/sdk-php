@@ -9,18 +9,18 @@ class CreateCustomerPaymentProfileRequest extends ANetApiRequestType
 {
 
     /**
-     * @var string $customerProfileId
+     * @property string $customerProfileId
      */
     private $customerProfileId = null;
 
     /**
-     * @var \net\authorize\api\contract\v1\CustomerPaymentProfileType
+     * @property \net\authorize\api\contract\v1\CustomerPaymentProfileType
      * $paymentProfile
      */
     private $paymentProfile = null;
 
     /**
-     * @var string $validationMode
+     * @property string $validationMode
      */
     private $validationMode = null;
 

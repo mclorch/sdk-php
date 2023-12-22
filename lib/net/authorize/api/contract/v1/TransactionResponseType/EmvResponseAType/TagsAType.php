@@ -9,7 +9,7 @@ class TagsAType implements \JsonSerializable
 {
 
     /**
-     * @var \net\authorize\api\contract\v1\EmvTagType[] $tag
+     * @property \net\authorize\api\contract\v1\EmvTagType[] $tag
      */
     private $tag = null;
 

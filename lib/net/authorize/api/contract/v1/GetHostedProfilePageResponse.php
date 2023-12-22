@@ -9,7 +9,7 @@ class GetHostedProfilePageResponse extends ANetApiResponseType
 {
 
     /**
-     * @var string $token
+     * @property string $token
      */
     private $token = null;
 

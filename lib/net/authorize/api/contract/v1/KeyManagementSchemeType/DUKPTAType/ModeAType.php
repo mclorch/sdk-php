@@ -9,12 +9,12 @@ class ModeAType implements \JsonSerializable
 {
 
     /**
-     * @var string $pIN
+     * @property string $pIN
      */
     private $pIN = null;
 
     /**
-     * @var string $data
+     * @property string $data
      */
     private $data = null;
 

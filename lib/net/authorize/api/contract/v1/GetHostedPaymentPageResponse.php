@@ -9,7 +9,7 @@ class GetHostedPaymentPageResponse extends ANetApiResponseType
 {
 
     /**
-     * @var string $token
+     * @property string $token
      */
     private $token = null;
 
