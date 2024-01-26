@@ -1,4 +1,7 @@
 <?php
+/**
+ * @phan-file-suppress PhanWriteOnlyPublicProperty
+ */
 namespace net\authorize\util;
 
 class MapperObj{

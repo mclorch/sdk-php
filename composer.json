@@ -7,7 +7,7 @@
     "license": "proprietary",
     "homepage": "http://developer.authorize.net",
     "require": {
-        "php": ">=5.6",
+        "php": "^8.2",
         "ext-curl": "*",
         "ext-json": "*"
     },
@@ -16,5 +16,5 @@
     },
     "autoload-dev": {
         "classmap": ["tests"]
-    }   
+    }
 }

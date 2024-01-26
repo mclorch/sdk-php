@@ -5,7 +5,7 @@ namespace net\authorize\api\contract\v1;
 /**
  * Class representing CustomerAddressExType
  *
- * 
+ *
  * XSD Type: customerAddressExType
  */
 class CustomerAddressExType extends CustomerAddressType implements \JsonSerializable
@@ -40,6 +40,7 @@ class CustomerAddressExType extends CustomerAddressType implements \JsonSerializ
 
 
     // Json Serialize Code
+    #[\ReturnTypeWillChange]
     public function jsonSerialize(){
         $values = array_filter((array)get_object_vars($this),
         function ($val){
@@ -47,7 +48,7 @@ class CustomerAddressExType extends CustomerAddressType implements \JsonSerializ
         });
         $mapper = \net\authorize\util\Mapper::Instance();
         foreach($values as $key => $value){
-            $classDetails = $mapper->getClass(get_class() , $key);
+            $classDetails = $mapper->getClass(get_class($this) , $key);
             if (isset($value)){
                 if ($classDetails->className === 'Date'){
                     $dateTime = $value->format('Y-m-d');
@@ -75,8 +76,8 @@ class CustomerAddressExType extends CustomerAddressType implements \JsonSerializ
         if(is_array($data) || is_object($data)) {
 			$mapper = \net\authorize\util\Mapper::Instance();
 			foreach($data AS $key => $value) {
-				$classDetails = $mapper->getClass(get_class() , $key);
-	 
+				$classDetails = $mapper->getClass(get_class($this) , $key);
+
 				if($classDetails !== NULL ) {
 					if ($classDetails->isArray) {
 						if ($classDetails->isCustomDefined) {
@@ -116,6 +117,6 @@ class CustomerAddressExType extends CustomerAddressType implements \JsonSerializ
 			}
 		}
     }
-    
+
 }
 

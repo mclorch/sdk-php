@@ -1,4 +1,7 @@
 <?php
+/**
+ * @phan-file-suppress PhanWriteOnlyPublicProperty
+ */
 namespace net\authorize\util;
 use JMS\Serializer\Annotation\Type;
 use JMS\Serializer\Annotation\SerializedName;
@@ -14,19 +17,19 @@ class SensitiveTag
 	 * @SerializedName("tagName")
      */
     public $tagName;
-	
+
 	/**
      * @Type("string")
 	 * @SerializedName("pattern")
      */
     public $pattern;
-	
+
 	/**
      * @Type("string")
 	 * @SerializedName("replacement")
      */
     public $replacement;
-	
+
 	/**
      * @Type("boolean")
 	 * @SerializedName("disableMask")
