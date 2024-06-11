@@ -1,11 +1,13 @@
 {
     "name": "authorizenet/authorizenet",
     "type": "library",
-	"version": "2.0.2",
     "description": "Official PHP SDK for Authorize.Net",
     "keywords": ["authorizenet", "authorize.net", "payment", "ecommerce"],
     "license": "proprietary",
     "homepage": "http://developer.authorize.net",
+    "replace": {
+        "authorizenet/authorizenet": "*"
+    },
     "require": {
         "php": "^8.2",
         "ext-curl": "*",
